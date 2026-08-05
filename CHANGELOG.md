@@ -1,5 +1,15 @@
 # Changelog
 
+## [2026-08-05] v0.1.1 - Added Navbar Responsiveness
+### Added
+- (none)
+
+### Changed
+- Made the nav bar responsive. Utilised Lucide React
+
+### Fixed
+- (none)
+
 ## [2026-08-05] v0.1 - The Initial Setup
 ### Added
 - `app/about/`, `app/case-studies`, `app/contact` - I set up the pages for the website.
