@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026-08-05] v0.1.2 - Added footer
+### Added
+- `components/layout/Footer.tsx` - Built a responsive dark footer with GitHub, LinkedIn, and Email links, plus a copyright line.
+- Imported the `Footer` component into `app/layout.tsx`.
+
+### Changed
+- Restyled the nav bar to match the footer: dark slate background, cyan `#06B6D4` hover accents, and removed the bottom border.
+- Made the "Anelka" logo a static brand mark instead of a clickable link to the home page.
+
+### Fixed
+- (none)
+
 ## [2026-08-05] v0.1.1 - Added Navbar Responsiveness
 ### Added
 - (none)

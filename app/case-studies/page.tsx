@@ -44,18 +44,12 @@ export default function CaseStudiesPage() {
 
       {/* Header */}
       <section className="mb-16">
-        <p className="mb-4 font-mono text-[#2563EB]">
-          Case Studies
-        </p>
-
         <h1 className="mb-6 text-5xl font-bold">
-          Projects built through curiosity and problem solving.
+          My Case Studies
         </h1>
 
         <p className="max-w-2xl text-lg text-slate-600">
-          A collection of technical projects and experiences showcasing
-          my journey from software development towards cybersecurity,
-          governance, and secure engineering.
+          Over the years, I have done lots of things, from internships to personal projects. Here are some of the most notable ones that I have worked on, showcasing my skills and interests in various domains.
         </p>
       </section>
 
