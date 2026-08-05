@@ -42,3 +42,9 @@ h5,
 h6 {
   font-family: var(--font-heading), monospace;
 }
+
+@keyframes film-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}

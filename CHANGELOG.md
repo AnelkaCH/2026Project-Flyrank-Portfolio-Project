@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026-08-05] v0.1.3 - Added images to Case Studies Landing Page
+### Added
+- `components/ui/FilmStrip.tsx` - Built a fil strip ui that shows pictures while moving from right to left.
+- Imported some images into `public/images/`.
+- Added images and film strip ui to Case Studies Landing Page
+
+### Changed
+- (none)
+
+### Fixed
+- (none)
+
 ## [2026-08-05] v0.1.2 - Added footer
 ### Added
 - `components/layout/Footer.tsx` - Built a responsive dark footer with GitHub, LinkedIn, and Email links, plus a copyright line.
