@@ -4,7 +4,7 @@
 ### Added
 - `components/ui/FilmStrip.tsx` - Built a fil strip ui that shows pictures while moving from right to left.
 - Imported some images into `public/images/`.
-- Added images and film strip ui to Case Studies Landing Page
+- Added images and film strip ui to Case Studies Landing Page.
 
 ### Changed
 - (none)
