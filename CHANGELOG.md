@@ -1,5 +1,16 @@
 # Changelog
 
+## [2026-08-06] v0.2 - Added things to the individual case studies
+### Added
+- `components/case-studies` filled with things to make certain ui work for the case studies pages, like the terminal and browser look.
+- `parseCaseStudyMarkdown.ts` to parse the content from the markdown files to the pages.
+
+### Changed
+- Every case study has been updated with their contents.
+
+### Fixed
+- (none)
+
 ## [2026-08-05] v0.1.3 - Added images to Case Studies Landing Page
 ### Added
 - `components/ui/FilmStrip.tsx` - Built a fil strip ui that shows pictures while moving from right to left.

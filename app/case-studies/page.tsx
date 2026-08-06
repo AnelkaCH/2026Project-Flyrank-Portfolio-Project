@@ -36,37 +36,10 @@ const filmStripImages = [
 
 const caseStudies = [
   {
-    title: "Backend AI Engineer @ Flyrank AI",
-    description:
-      "AI engineering internship work focused on AI fluency, workflow automation, and building with modern AI tools.",
-    tags: ["AI", "Claude", "Automation", "MCP"],
-    imageref: "/images/case-studies/flyrank-ai/main-photo.png",
-    imagealt: "Flyrank AI logo",
-    href: "/case-studies/flyrank-ai",
-  },
-  {
-    title: "Interning @ Accelist Lentera Indonesia",
-    description:
-      "Full stack development internship experience building web applications and improving software engineering practices.",
-    tags: ["React", "Next.js", "Full Stack"],
-    imageref: "/images/case-studies/accelist/main-photo.png",
-    imagealt: "Accelist Lentera Indonesia logo",
-    href: "/case-studies/accelist-lentera-indonesia",
-  },
-  {
-    title: "Web Developer @ GenDigital Academy",
-    description:
-      "An organisation that teaches digital literacy across Indonesia.",
-    tags: ["Wix", "CMS", "Web Development", "Digital Literacy"],
-    imageref: "/images/case-studies/gendigital-academy/main-photo.png",
-    imagealt: "GenDigital Academy Website Screenshot",
-    href: "/case-studies/gendigital-academy",
-  },
-  {
     title: "Developing a Job Monitoring System",
     description:
-      "An automated platform that monitors internship and graduate job opportunities using APIs, feeds, and structured data processing.",
-    tags: ["Python", "Automation", "APIs", "AI"],
+      "Automated internship tracker across 10+ platforms, built with rate limiting, robots.txt compliance, and tiered filtering.",
+    tags: ["Python", "Automation", "APIs", "Logging"],
     imageref: "/images/case-studies/job-monitoring-system/main-photo.png",
     imagealt: "Job Monitoring System Screenshot",
     href: "/case-studies/job-monitoring-system",
@@ -74,11 +47,38 @@ const caseStudies = [
   {
     title: "Building a Password Strength Checker",
     description:
-      "A security-focused project exploring password validation concepts and secure coding practices.",
+      "CLI tool for evaluating password strength, first step toward a full password manager.",
     tags: ["Python", "Security", "CLI"],
     imageref: "/images/case-studies/password-strength-checker/main-photo.png",
     imagealt: "Password Strength Checker Screenshot",
     href: "/case-studies/password-strength-checker",
+  },
+  {
+    title: "Interning @ Accelist Lentera Indonesia",
+    description:
+      "Full stack internship working in projects like syncing an internal platform with Odoo through APIs and webhooks.",
+    tags: ["React", "Next.js", ".NET", "Full Stack"],
+    imageref: "/images/case-studies/accelist/main-photo.png",
+    imagealt: "Accelist Lentera Indonesia logo",
+    href: "/case-studies/accelist-lentera-indonesia",
+  },
+  {
+    title: "Backend AI Engineer @ Flyrank AI",
+    description:
+      "Backend work building an API through documentation, persistence changes, and containerisation.",
+    tags: ["Node.js", "Express", "SQLite", "PostgreSQL", "Docker", "Supabase", "MCP", "Claude"],
+    imageref: "/images/case-studies/flyrank-ai/main-photo.png",
+    imagealt: "Flyrank AI logo",
+    href: "/case-studies/flyrank-ai",
+  },
+  {
+    title: "Web Developer @ GenDigital Academy",
+    description:
+      "Not your typical web dev role. Maintained the organisation's website and CMS while supporting digital literacy programmes that make technology more accessible to underserved communities.",
+    tags: ["Wix", "CMS", "Web Development", "Digital Literacy"],
+    imageref: "/images/case-studies/gendigital-academy/main-photo.png",
+    imagealt: "GenDigital Academy Website Screenshot",
+    href: "/case-studies/gendigital-academy",
   },
 ];
 

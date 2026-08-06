@@ -1,7 +1,19 @@
-export default function AboutPage() {
-  return (
-    <main className="mx-auto max-w-6xl px-6 py-20">
-      <h1 className="text-5xl font-bold">Case Study: FlyRank AI</h1>
-    </main>
-  );
+import fs from "node:fs";
+import path from "node:path";
+import type { Metadata } from "next";
+import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
+import { parseCaseStudyMarkdown } from "@/components/case-study/parseCaseStudyMarkdown";
+
+const source =
+  "app/case-studies/flyrank-ai/Backend_AI_Engineer_at_FlyRank_AI.md";
+const markdown = fs.readFileSync(path.join(process.cwd(), source), "utf8");
+const data = parseCaseStudyMarkdown(markdown, source);
+
+export const metadata: Metadata = {
+  title: "FlyRank AI | Case Study",
+  description: data.subtitle,
+};
+
+export default function FlyRankAICaseStudyPage() {
+  return <CaseStudyArticle data={data} />;
 }
