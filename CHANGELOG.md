@@ -1,5 +1,15 @@
 # Changelog
 
+## [2026-08-06] v0.2.1 - Added the window look to the case studies landing page
+### Added
+- `CaseStudyWindow.tsx` specifically made for the landing page
+
+### Changed
+- Add the windows look to landing page, splitting it in two sections: `Personal Projects` and `Professional Experience`
+
+### Fixed
+- (none)
+
 ## [2026-08-06] v0.2 - Added things to the individual case studies
 ### Added
 - `components/case-studies` filled with things to make certain ui work for the case studies pages, like the terminal and browser look.

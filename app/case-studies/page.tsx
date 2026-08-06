@@ -1,5 +1,8 @@
-import Link from "next/link";
 import FilmStrip from "@/components/ui/FilmStrip";
+import CaseStudyWindow, {
+  type CaseStudyWindowCard,
+  type CaseStudyWindowTab,
+} from "@/components/case-study/CaseStudyWindow";
 
 const filmStripImages = [
   {
@@ -37,6 +40,7 @@ const filmStripImages = [
 const caseStudies = [
   {
     title: "Developing a Job Monitoring System",
+    tabtag: "personal project",
     description:
       "Automated internship tracker across 10+ platforms, built with rate limiting, robots.txt compliance, and tiered filtering.",
     tags: ["Python", "Automation", "APIs", "Logging"],
@@ -46,6 +50,7 @@ const caseStudies = [
   },
   {
     title: "Building a Password Strength Checker",
+    tabtag: "personal project",
     description:
       "CLI tool for evaluating password strength, first step toward a full password manager.",
     tags: ["Python", "Security", "CLI"],
@@ -55,6 +60,7 @@ const caseStudies = [
   },
   {
     title: "Interning @ Accelist Lentera Indonesia",
+    tabtag: "professional experience",
     description:
       "Full stack internship working in projects like syncing an internal platform with Odoo through APIs and webhooks.",
     tags: ["React", "Next.js", ".NET", "Full Stack"],
@@ -64,6 +70,7 @@ const caseStudies = [
   },
   {
     title: "Backend AI Engineer @ Flyrank AI",
+    tabtag: "professional experience",
     description:
       "Backend work building an API through documentation, persistence changes, and containerisation.",
     tags: ["Node.js", "Express", "SQLite", "PostgreSQL", "Docker", "Supabase", "MCP", "Claude"],
@@ -73,6 +80,7 @@ const caseStudies = [
   },
   {
     title: "Web Developer @ GenDigital Academy",
+    tabtag: "professional experience",
     description:
       "Not your typical web dev role. Maintained the organisation's website and CMS while supporting digital literacy programmes that make technology more accessible to underserved communities.",
     tags: ["Wix", "CMS", "Web Development", "Digital Literacy"],
@@ -81,6 +89,19 @@ const caseStudies = [
     href: "/case-studies/gendigital-academy",
   },
 ];
+
+const tabLabels: Record<string, string> = {
+  "personal project": "Personal Projects",
+  "professional experience": "Professional Experience",
+};
+
+const caseStudyTabs: CaseStudyWindowTab[] = Object.entries(
+  caseStudies.reduce<Record<string, CaseStudyWindowCard[]>>((groups, project) => {
+    const label = tabLabels[project.tabtag] ?? project.tabtag;
+    groups[label] = [...(groups[label] ?? []), project];
+    return groups;
+  }, {})
+).map(([label, cards]) => ({ label, cards }));
 
 export default function CaseStudiesPage() {
   return (
@@ -102,55 +123,9 @@ export default function CaseStudiesPage() {
         <FilmStrip images={filmStripImages} fullBleed />
       </section>
 
-      {/* Case Study Cards */}
-      <section className="grid gap-8 md:grid-cols-2">
-
-        {caseStudies.map((project) => (
-          <article
-            key={project.title}
-            className="rounded-xl border border-slate-200 bg-white p-8 transition hover:border-[#2563EB]"
-          >
-
-            <h2 className="mb-3 text-2xl font-bold">
-              {project.title}
-            </h2>
-
-            <img
-              src={project.imageref}
-              alt={project.imagealt}
-              width={1200}
-              height={800}
-              className="mb-6 w-full rounded-lg object-cover"
-            />
-
-            <p className="mb-6 text-slate-600">
-              {project.description}
-            </p>
-
-
-            {/* Tags */}
-            <div className="mb-6 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-
-            <Link
-              href={project.href}
-              className="font-medium text-[#2563EB] hover:text-[#06B6D4]"
-            >
-              View Case Study →
-            </Link>
-
-          </article>
-        ))}
-
+      {/* Case Study Browser Window */}
+      <section className="mb-16">
+        <CaseStudyWindow tabs={caseStudyTabs} />
       </section>
 
     </main>
