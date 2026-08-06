@@ -1,45 +1,33 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import CaseStudyBrowser from "./CaseStudyBrowser";
+import TerminalWindow from "@/components/ui/TerminalWindow";
 import type { CaseStudyData, CaseStudyList } from "./parseCaseStudyMarkdown";
 
-function TerminalWindow({ block }: { block: CaseStudyList }) {
+function TerminalList({ block }: { block: CaseStudyList }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-slate-800 bg-[#0d1117] shadow-lg">
-      <div className="flex items-center gap-2 border-b border-slate-800 bg-[#161b22] px-4 py-3">
-        <span aria-hidden="true" className="size-3 rounded-full bg-[#ff5f56]" />
-        <span aria-hidden="true" className="size-3 rounded-full bg-[#ffbd2e]" />
-        <span aria-hidden="true" className="size-3 rounded-full bg-[#27c93f]" />
-        <span className="ml-3 font-mono text-sm text-slate-400">
-          {block.label ?? "bash"}
+    <ul className="space-y-2.5">
+      {block.items.map((item, itemIndex) => (
+        <li
+          key={itemIndex}
+          className="flex gap-3 font-mono text-sm leading-relaxed text-slate-100"
+        >
+          <span aria-hidden="true" className="shrink-0 text-[#2563EB]">
+            $
+          </span>
+          <span>{item}</span>
+        </li>
+      ))}
+
+      <li className="flex gap-3 font-mono text-sm leading-relaxed">
+        <span aria-hidden="true" className="shrink-0 text-[#2563EB]">
+          $
         </span>
-      </div>
-
-      <div className="px-6 py-5">
-        <ul className="space-y-2.5">
-          {block.items.map((item, itemIndex) => (
-            <li
-              key={itemIndex}
-              className="flex gap-3 font-mono text-sm leading-relaxed text-slate-100"
-            >
-              <span aria-hidden="true" className="shrink-0 text-[#2563EB]">
-                $
-              </span>
-              <span>{item}</span>
-            </li>
-          ))}
-
-          <li className="flex gap-3 font-mono text-sm leading-relaxed">
-            <span aria-hidden="true" className="shrink-0 text-[#2563EB]">
-              $
-            </span>
-            <span aria-hidden="true" className="animate-pulse text-slate-100">
-              ▌
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
+        <span aria-hidden="true" className="animate-pulse text-slate-100">
+          ▌
+        </span>
+      </li>
+    </ul>
   );
 }
 
@@ -76,7 +64,9 @@ export default function CaseStudyArticle({ data }: { data: CaseStudyData }) {
       {lists.length > 0 && (
         <div className="mt-12 space-y-6">
           {lists.map((block, index) => (
-            <TerminalWindow key={index} block={block} />
+            <TerminalWindow key={index} title={block.label ?? "bash"}>
+              <TerminalList block={block} />
+            </TerminalWindow>
           ))}
         </div>
       )}

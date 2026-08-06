@@ -1,5 +1,16 @@
 # Changelog
 
+## [2026-08-06] v0.3 - Added the about page
+### Added
+- More photos at `public/images/about/`
+- New `BrowserTabs.tsx` and `TerminalWindow.tsx` for the About page which works differently to the ones on the Case Studies page.
+
+### Changed
+- Filled the about page with actual content.
+
+### Fixed
+- (none)
+
 ## [2026-08-06] v0.2.1 - Added the window look to the case studies landing page
 ### Added
 - `CaseStudyWindow.tsx` specifically made for the landing page
