@@ -32,7 +32,7 @@ const milestones = [
     phase: "Then",
     title: "Where it started",
     description:
-      "As a kid, I have always been interested in tech. It started with building games on Roblox during elementary, then it led to coding bootcamps and competitions like UNTAR Meta Spark and Codeavour 6.0 and 7.0, where I built many more projects.",
+      "As a kid, I have always had a huge interest in tech. It started with building games on Roblox during elementary, then it led to coding bootcamps and competitions like UNTAR Meta Spark and Codeavour 6.0 and 7.0, where I built many more projects, ranging from AR programs to IoT systems.",
     src: "/images/case-studies/default/darwin-iot-codeavour-7.jpeg",
     alt: "Anelka presenting the Darwin IoT robot at Codeavour 7",
   },
@@ -66,9 +66,14 @@ export default function AboutPage() {
               About Me
             </h1>
 
-            <p className="max-w-xl text-lg text-slate-600">
+            <p className="max-w-xl text-lg text-slate-600 mb-4">
               Incoming Computer Science &amp; Design (Security) student at SUTD.
               Moving from building software to securing it.
+            </p>
+
+            <p className="max-w-xl text-lg text-slate-600">
+              Based in Jakarta, Indonesia. 
+              Graduated from Bukit Sion Further Education in 2026 as valedictorian.
             </p>
           </div>
 
@@ -98,7 +103,7 @@ export default function AboutPage() {
 
               <div className="relative" style={{ aspectRatio: "4 / 5" }}>
                 <Image
-                  src="/images/about/anelka-portrait.jpeg"
+                  src="/images/about/anelka-photo.jpeg"
                   alt="Portrait of Anelka, smiling and wearing a black t-shirt, with a blurred background of trees and sunlight"
                   fill
                   sizes="(min-width: 1024px) 24rem, 100vw"
@@ -116,7 +121,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="grid gap-12 lg:grid-cols-[240px_1fr]">
             <p className="font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB] lg:sticky lg:top-8 lg:self-start">
-              Background
+              Past, Present, &amp; Future
             </p>
 
             <ol className="relative space-y-12 border-l-2 border-slate-700 pl-8">
