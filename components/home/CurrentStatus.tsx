@@ -1,30 +1,33 @@
 import Win95Window from "@/components/ui/Win95Window";
 
+{/* Operational: #008000*/}
+{/* In Progress: #b8860b*/}
+{/* Scheduled: #000080*/}
 const statusItems = [
   {
     id: "accelist-internship",
-    label: "accelist-internship",
+    label: "Accelist Internship",
     status: "operational",
     description: "full stack dev, .NET/React/Vue, since July 2026",
     color: "#008000",
   },
   {
     id: "flyrank-backend",
-    label: "flyrank-backend",
+    label: "Flyrank AI Internship",
     status: "operational",
     description: "Node/Express, Docker, Postgres track",
     color: "#008000",
   },
   {
     id: "sc-900-exam",
-    label: "sc-900-exam",
-    status: "in progress",
-    description: "voucher secured, not yet scheduled",
-    color: "#b8860b",
+    label: "SC-900 Exam",
+    status: "scheduled",
+    description: "voucher secured and scheduled",
+    color: "#000080",
   },
   {
     id: "sutd-sept-2026",
-    label: "sutd-sept-2026",
+    label: "SUTD Sept 2026",
     status: "scheduled",
     description: "relocation + matriculation, ETA Sept 8, 2026",
     color: "#000080",
@@ -46,7 +49,7 @@ export default function CurrentStatus({ className = "" }: CurrentStatusProps) {
             style={{ backgroundColor: "#b8860b" }}
           />
           <span className="text-xs sm:text-sm font-bold text-black uppercase truncate">
-            SYSTEM STATUS: PARTIALLY OPERATIONAL
+            PERSON'S ACTIVITY STATUS: PARTIALLY OPERATIONAL
           </span>
         </div>
 

@@ -44,10 +44,10 @@ export default function Home() {
         <div className="mx-auto max-w-2xl px-0 sm:px-6">
           <div className="px-6 sm:px-0 mb-8">
             <h2 className="text-3xl font-bold">
-              Interactive Console
+              The Interactive Console
             </h2>
             <p className="mt-2 text-sm">
-              Query background, technical stack, or ethos.
+              Get to know me quickly (my journey, my claims, and many more) by interacting with the console below. Click on a command to see its output.
             </p>
           </div>
           <InteractiveTerminal />

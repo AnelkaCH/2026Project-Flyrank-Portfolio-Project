@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import TerminalWindow from "@/components/ui/TerminalWindow";
 
 const ETHOS =
-  "I am able to sense where the legal or ethical line sits in a system before I do anything, and I stop to confirm before crossing it rather than building first and face the consequences later, which is proven by how I researched the legal basis for my Job Monitoring System before writing code, and drew a hard boundary refusing to bypass CAPTCHA or bot-detection rather than pushing through it.";
+  "'I am able to sense where the legal or ethical line sits in a system before I do anything, and I stop to confirm before crossing it rather than building first and face the consequences later, which is proven by how I researched the legal basis for my Job Monitoring System before writing code, and drew a hard boundary refusing to bypass CAPTCHA or bot-detection rather than pushing through it.'";
 
 const GITHUB_URL = "https://github.com/AnelkaCH";
 const LINKEDIN_URL = "https://www.linkedin.com/in/anelka-hariyanto/";
@@ -19,9 +19,9 @@ interface Command {
 
 const commands: Record<string, Command> = {
   whois: {
-    text: `Anelka — security-minded developer based in Jakarta, Indonesia.
+    text: `Anelka Cornelius Hariyanto. About: security-minded developer based in Jakarta, Indonesia.
 Formerly full-stack web development, now shifting toward security and governance.
-Got into security after being hacked as a kid — I know what losing control of your own stuff feels like, and I've cared more about preventing harm than shipping features ever since.`,
+Got into security after being hacked as a kid — 'I know what losing control of your own stuff feels like, and I've cared more about preventing harm than shipping features ever since.'`,
   },
   ethos: {
     text: ETHOS,
