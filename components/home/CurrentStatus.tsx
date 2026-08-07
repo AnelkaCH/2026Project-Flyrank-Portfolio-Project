@@ -8,28 +8,28 @@ const statusItems = [
     id: "accelist-internship",
     label: "Accelist Internship",
     status: "operational",
-    description: "full stack dev, .NET/React/Vue, since July 2026",
+    description: "Full Stack Developer",
     color: "#008000",
   },
   {
     id: "flyrank-backend",
     label: "Flyrank AI Internship",
     status: "operational",
-    description: "Node/Express, Docker, Postgres track",
+    description: "Backend AI Engineer",
     color: "#008000",
   },
   {
     id: "sc-900-exam",
     label: "SC-900 Exam",
     status: "scheduled",
-    description: "voucher secured and scheduled",
+    description: "by end of August 2026",
     color: "#000080",
   },
   {
     id: "sutd-sept-2026",
     label: "SUTD Sept 2026",
     status: "scheduled",
-    description: "relocation + matriculation, ETA Sept 8, 2026",
+    description: "relocation + matriculation",
     color: "#000080",
   },
 ] as const;
@@ -48,8 +48,8 @@ export default function CurrentStatus({ className = "" }: CurrentStatusProps) {
             className="inline-block w-3.5 h-3.5 rounded-full"
             style={{ backgroundColor: "#b8860b" }}
           />
-          <span className="text-xs sm:text-sm font-bold text-black uppercase truncate">
-            PERSON'S ACTIVITY STATUS: PARTIALLY OPERATIONAL
+          <span className="text-xs sm:text-sm font-bold text-black uppercase flex-1 min-w-0 break-words">
+            CURRENT STATUS: PARTIALLY OPERATIONAL
           </span>
         </div>
 
@@ -82,7 +82,7 @@ export default function CurrentStatus({ className = "" }: CurrentStatusProps) {
                   >
                     [{item.status}]
                   </span>
-                  <span className="text-xs text-gray-700 truncate">
+                  <span className="text-xs text-gray-700 flex-1 min-w-0 break-words">
                     {item.description}
                   </span>
                 </div>

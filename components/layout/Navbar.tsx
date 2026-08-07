@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <span className="text-xl font-bold text-slate-50">
-          Anelka
+          Anelka Cornelius Hariyanto
         </span>
 
         {/* Desktop Navigation */}

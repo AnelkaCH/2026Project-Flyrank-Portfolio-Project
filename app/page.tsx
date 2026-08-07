@@ -14,12 +14,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       {/* Hero — full width grid: text+status left, photo right */}
-      <section className="mx-auto max-w-6xl px-0 sm:px-6 pt-16 pb-14 sm:pt-24 sm:pb-20">
-        <div className="grid items-stretch gap-8 lg:grid-cols-[5fr_7fr] w-full">
-          {/* Left column: heading, description, current status */}
-          <div className="flex flex-col justify-center gap-6 px-6 sm:px-0">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 pt-16 pb-14 sm:pt-24 sm:pb-20">
+
+        <div className="grid min-w-0 items-stretch gap-8 lg:grid-cols-[2fr_1fr] w-full">
+
+          {/* Left column */}
+          <div className="min-w-0 flex flex-col justify-center gap-6">
+
             <div>
               <h1 className="mb-6 text-5xl font-bold">
                 Hi, I&apos;m Anelka
@@ -32,11 +35,14 @@ export default function Home() {
             </div>
 
             <CurrentStatus className="w-full" />
+
           </div>
 
-          {/* Right column: photo */}
-          <HeroImageWindow className="w-full" />
+          {/* Right column */}
+          <HeroImageWindow className="w-full min-w-0" />
+
         </div>
+
       </section>
 
       {/* Interactive Terminal */}
