@@ -1,51 +1,95 @@
 import type { ReactNode } from "react";
-import { Minus, Square, X } from "lucide-react";
-
-const windowButtonClasses =
-  "flex h-5 w-6 items-center justify-center bg-[#c0c0c0] text-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#808080] transition hover:bg-[#d4d4d4] active:shadow-[inset_-1px_-1px_0_#fff,inset_1px_1px_0_#808080]";
 
 interface Win95WindowProps {
   title?: string;
   children: ReactNode;
+  className?: string;
 }
 
 export default function Win95Window({
   title = "window",
   children,
+  className = "",
 }: Win95WindowProps) {
   return (
-    <div className="overflow-hidden border border-slate-700 bg-white">
-      <div className="flex items-center justify-between bg-gradient-to-r from-[#000080] to-[#1084d0] px-2 py-1.5">
-        <span className="pl-1 font-mono text-xs font-bold text-white">
+    <div
+      className={`font-mono text-black select-none flex flex-col ${className}`}
+      style={{
+        backgroundColor: "#c0c0c0",
+        borderStyle: "outset",
+        borderWidth: "2px",
+        borderColor: "#ffffff #808080 #808080 #ffffff",
+      }}
+    >
+      {/* Title bar */}
+      <div
+        className="flex items-center justify-between p-1.5 shrink-0"
+        style={{
+          backgroundColor: "#000080",
+        }}
+      >
+        <span className="pl-1 text-xs font-bold text-white uppercase tracking-wide">
           {title}
         </span>
 
-        <div className="flex items-center gap-0.5">
+        <div className="flex items-center gap-1">
+          {/* Minimize Button */}
           <button
             type="button"
-            aria-label="Minimise"
-            className={windowButtonClasses}
+            aria-label="Minimize"
+            className="flex h-5 w-6 items-center justify-center font-bold text-black active:pt-0.5 active:pl-0.5"
+            style={{
+              backgroundColor: "#c0c0c0",
+              borderStyle: "outset",
+              borderWidth: "2px",
+              borderColor: "#ffffff #808080 #808080 #ffffff",
+              fontSize: "10px",
+              lineHeight: "1",
+            }}
           >
-            <Minus className="size-3" strokeWidth={3} />
+            _
           </button>
+          {/* Maximize Button */}
           <button
             type="button"
-            aria-label="Maximise"
-            className={windowButtonClasses}
+            aria-label="Maximize"
+            className="flex h-5 w-6 items-center justify-center font-bold text-black active:pt-0.5 active:pl-0.5"
+            style={{
+              backgroundColor: "#c0c0c0",
+              borderStyle: "outset",
+              borderWidth: "2px",
+              borderColor: "#ffffff #808080 #808080 #ffffff",
+              fontSize: "10px",
+              lineHeight: "1",
+            }}
           >
-            <Square className="size-2.5" strokeWidth={3} />
+            □
           </button>
+          {/* Close Button */}
           <button
             type="button"
             aria-label="Close"
-            className={`${windowButtonClasses} bg-[#c00000] text-white shadow-[inset_1px_1px_0_#ff8080,inset_-1px_-1px_0_#800000] hover:bg-[#d40000] active:shadow-[inset_-1px_-1px_0_#ff8080,inset_1px_1px_0_#800000]`}
+            className="flex h-5 w-6 items-center justify-center font-bold text-black active:pt-0.5 active:pl-0.5"
+            style={{
+              backgroundColor: "#c0c0c0",
+              borderStyle: "outset",
+              borderWidth: "2px",
+              borderColor: "#ffffff #808080 #808080 #ffffff",
+              fontSize: "10px",
+              lineHeight: "1",
+            }}
           >
-            <X className="size-3" strokeWidth={3} />
+            x
           </button>
         </div>
       </div>
 
-      {children}
+      {/* Content Area */}
+      <div className="p-3 bg-[#c0c0c0] flex-1 flex flex-col">
+        {children}
+      </div>
     </div>
   );
 }
+
+

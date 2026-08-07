@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { Minus, Square, X } from "lucide-react";
+import Win95Window from "@/components/ui/Win95Window";
 
 export interface BrowserTab {
   label: string;
@@ -13,9 +13,6 @@ interface BrowserTabsProps {
   tabs: BrowserTab[];
 }
 
-const windowButtonClasses =
-  "flex h-5 w-6 items-center justify-center bg-[#c0c0c0] text-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#808080] transition hover:bg-[#d4d4d4] active:shadow-[inset_-1px_-1px_0_#fff,inset_1px_1px_0_#808080]";
-
 export default function BrowserTabs({
   title = "browser",
   tabs,
@@ -24,66 +21,53 @@ export default function BrowserTabs({
   const activeTab = tabs[Math.min(activeIndex, tabs.length - 1)];
 
   return (
-    <div className="overflow-hidden border border-slate-700 bg-white">
-      <div className="flex items-center justify-between bg-gradient-to-r from-[#000080] to-[#1084d0] px-2 py-1.5">
-        <span className="pl-1 font-mono text-xs font-bold text-white">
-          {title}
-        </span>
-
-        <div className="flex items-center gap-0.5">
-          <button
-            type="button"
-            aria-label="Minimise"
-            className={windowButtonClasses}
-          >
-            <Minus className="size-3" strokeWidth={3} />
-          </button>
-          <button
-            type="button"
-            aria-label="Maximise"
-            className={windowButtonClasses}
-          >
-            <Square className="size-2.5" strokeWidth={3} />
-          </button>
-          <button
-            type="button"
-            aria-label="Close"
-            className={`${windowButtonClasses} bg-[#c00000] text-white shadow-[inset_1px_1px_0_#ff8080,inset_-1px_-1px_0_#800000] hover:bg-[#d40000] active:shadow-[inset_-1px_-1px_0_#ff8080,inset_1px_1px_0_#800000]`}
-          >
-            <X className="size-3" strokeWidth={3} />
-          </button>
-        </div>
+    <Win95Window title={`C:\\${title.toUpperCase()}.EXE`}>
+      {/* Folder Tabs Wrapper */}
+      <div className="flex flex-col gap-1 sm:flex-row sm:overflow-x-auto pb-1 bg-[#c0c0c0] px-1 pt-1 border-b-2 border-white">
+        {tabs.map((tab, index) => {
+          const isActive = index === activeIndex;
+          return (
+            <button
+              key={tab.label}
+              type="button"
+              role="tab"
+              id={`browser-tab-${index}`}
+              aria-selected={isActive}
+              aria-controls={`browser-panel-${index}`}
+              onClick={() => setActiveIndex(index)}
+              className="shrink-0 px-4 py-2 text-left font-mono text-xs sm:text-sm font-bold uppercase transition focus:outline-none"
+              style={{
+                backgroundColor: isActive ? "#c0c0c0" : "#d4d4d4",
+                borderStyle: "outset",
+                borderWidth: "2px",
+                borderColor: isActive
+                  ? "#ffffff #808080 #c0c0c0 #ffffff"
+                  : "#ffffff #808080 #808080 #ffffff",
+                marginBottom: isActive ? "-2px" : "0px",
+                zIndex: isActive ? 10 : 1,
+              }}
+            >
+              {tab.label}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="flex flex-col gap-1 bg-slate-200 p-2 sm:flex-row sm:overflow-x-auto sm:pb-0">
-        {tabs.map((tab, index) => (
-          <button
-            key={tab.label}
-            type="button"
-            role="tab"
-            id={`browser-tab-${index}`}
-            aria-selected={index === activeIndex}
-            aria-controls={`browser-panel-${index}`}
-            onClick={() => setActiveIndex(index)}
-            className={`shrink-0 rounded-lg px-4 py-3 text-left text-sm font-medium transition sm:w-auto sm:shrink-0 sm:whitespace-nowrap sm:rounded-t-lg sm:rounded-b-none sm:border-b-2 sm:border-b-slate-400 sm:px-4 sm:py-2 sm:text-center ${
-              index === activeIndex
-                ? "bg-white text-slate-900 sm:border-b-white"
-                : "bg-slate-300 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
+      {/* Content panel */}
       <div
         role="tabpanel"
         id={`browser-panel-${activeIndex}`}
         aria-labelledby={`browser-tab-${activeIndex}`}
-        className="bg-white px-6 py-10 sm:px-10"
+        className="p-6 bg-white text-black mt-2 font-mono"
+        style={{
+          borderStyle: "inset",
+          borderWidth: "2px",
+          borderColor: "#808080 #ffffff #ffffff #808080",
+        }}
       >
         {activeTab.content}
       </div>
-    </div>
+    </Win95Window>
   );
 }
+

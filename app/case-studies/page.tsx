@@ -39,10 +39,10 @@ const caseStudyTabs = buildCaseStudyTabs();
 
 export default function CaseStudiesPage() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-20">
+    <main className="mx-auto max-w-6xl px-0 sm:px-6 py-20">
 
       {/* Header */}
-      <section className="mb-16">
+      <section className="mb-16 px-6 sm:px-0">
         <h1 className="mb-6 text-5xl font-bold">
           My Case Studies
         </h1>
@@ -65,3 +65,4 @@ export default function CaseStudiesPage() {
     </main>
   );
 }
+

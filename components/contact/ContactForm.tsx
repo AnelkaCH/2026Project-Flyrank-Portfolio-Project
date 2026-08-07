@@ -6,13 +6,15 @@ import Win95Window from "@/components/ui/Win95Window";
 const EMAIL = "anelka.c.hariyanto@gmail.com";
 
 const labelClasses =
-  "mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-slate-600";
+  "mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-slate-800";
 
-const inputClasses =
-  "w-full rounded-sm border border-slate-400 bg-white px-3 py-2 font-mono text-sm text-slate-900 shadow-[inset_1px_1px_2px_rgba(15,23,42,0.15)] outline-none transition focus:border-[#000080]";
-
-const buttonClasses =
-  "inline-flex items-center gap-2 rounded-sm bg-[#c0c0c0] px-5 py-2 font-mono text-sm font-bold text-slate-900 shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#808080] transition hover:bg-[#d4d4d4] active:shadow-[inset_-1px_-1px_0_#fff,inset_1px_1px_0_#808080]";
+const inputStyle = {
+  backgroundColor: "#ffffff",
+  borderStyle: "inset",
+  borderWidth: "2px",
+  borderColor: "#808080 #ffffff #ffffff #808080",
+  outline: "none",
+};
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -30,7 +32,15 @@ export default function ContactForm() {
 
   return (
     <Win95Window title="contact">
-      <form onSubmit={handleSubmit} className="bg-slate-100 p-6 sm:p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="p-6 bg-white text-black"
+        style={{
+          borderStyle: "inset",
+          borderWidth: "2px",
+          borderColor: "#808080 #ffffff #ffffff #808080",
+        }}
+      >
         <div className="mb-4">
           <label htmlFor="contact-name" className={labelClasses}>
             Name
@@ -42,7 +52,8 @@ export default function ContactForm() {
             autoComplete="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className={inputClasses}
+            className="w-full px-3 py-2 font-mono text-sm text-slate-900"
+            style={inputStyle}
             placeholder="Your name"
           />
         </div>
@@ -58,7 +69,8 @@ export default function ContactForm() {
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={inputClasses}
+            className="w-full px-3 py-2 font-mono text-sm text-slate-900"
+            style={inputStyle}
             placeholder="you@example.com"
           />
         </div>
@@ -73,16 +85,20 @@ export default function ContactForm() {
             rows={6}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className={`${inputClasses} resize-y`}
+            className="w-full px-3 py-2 font-mono text-sm text-slate-900 resize-y"
+            style={inputStyle}
             placeholder="What are you working on, and how can I help?"
           />
         </div>
 
         <div className="flex flex-wrap items-center gap-4">
-          <button type="submit" className={buttonClasses}>
+          <button
+            type="submit"
+            className="inline-block px-5 py-2 font-mono text-sm font-bold bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] active:border-t-[#808080] active:border-l-[#808080] active:border-r-white active:border-b-white active:pt-[9px] active:pb-[7px] active:pl-[21px] active:pr-[19px]"
+          >
             Send Message
           </button>
-          <p className="text-sm text-slate-500">
+          <p className="text-xs text-slate-600 font-mono">
             Opens your email app with the message pre-filled.
           </p>
         </div>
@@ -90,3 +106,4 @@ export default function ContactForm() {
     </Win95Window>
   );
 }
+

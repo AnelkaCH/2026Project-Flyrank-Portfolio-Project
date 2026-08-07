@@ -1,10 +1,7 @@
 import Image from "next/image";
-import { Minus, Square, X } from "lucide-react";
 import TerminalWindow from "@/components/ui/TerminalWindow";
 import BrowserTabs from "@/components/ui/BrowserTabs";
-
-const windowButtonClasses =
-  "flex h-5 w-6 items-center justify-center bg-[#c0c0c0] text-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#808080] transition hover:bg-[#d4d4d4] active:shadow-[inset_-1px_-1px_0_#fff,inset_1px_1px_0_#808080]";
+import Win95Window from "@/components/ui/Win95Window";
 
 const values = [
   {
@@ -59,9 +56,9 @@ export default function AboutPage() {
     <main className="min-h-screen bg-background">
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-0 sm:px-6 py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
+          <div className="px-6 sm:px-0">
             <h1 className="mb-6 text-5xl font-bold">
               About Me
             </h1>
@@ -78,30 +75,15 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto w-full max-w-sm">
-            <div className="overflow-hidden rounded-lg border border-slate-700 bg-white shadow-xl">
-              <div className="flex items-center justify-between bg-gradient-to-r from-[#000080] to-[#1084d0] px-2 py-1.5">
-                <span className="pl-1 font-mono text-xs font-bold text-white">
-                  portrait.jpg
-                </span>
-
-                <div className="flex items-center gap-0.5">
-                  <button type="button" aria-label="Minimise" className={windowButtonClasses}>
-                    <Minus className="size-3" strokeWidth={3} />
-                  </button>
-                  <button type="button" aria-label="Maximise" className={windowButtonClasses}>
-                    <Square className="size-2.5" strokeWidth={3} />
-                  </button>
-                  <button
-                    type="button"
-                    aria-label="Close"
-                    className={`${windowButtonClasses} bg-[#c00000] text-white shadow-[inset_1px_1px_0_#ff8080,inset_-1px_-1px_0_#800000] hover:bg-[#d40000] active:shadow-[inset_-1px_-1px_0_#ff8080,inset_1px_1px_0_#800000]`}
-                  >
-                    <X className="size-3" strokeWidth={3} />
-                  </button>
-                </div>
-              </div>
-
-              <div className="relative" style={{ aspectRatio: "4 / 5" }}>
+            <Win95Window title="portrait.jpg">
+              <div
+                className="relative w-full aspect-[4/5] overflow-hidden"
+                style={{
+                  borderStyle: "inset",
+                  borderWidth: "2px",
+                  borderColor: "#808080 #ffffff #ffffff #808080",
+                }}
+              >
                 <Image
                   src="/images/about/anelka-photo.jpeg"
                   alt="Portrait of Anelka, smiling and wearing a black t-shirt, with a blurred background of trees and sunlight"
@@ -111,10 +93,11 @@ export default function AboutPage() {
                   loading="eager"
                 />
               </div>
-            </div>
+            </Win95Window>
           </div>
         </div>
       </section>
+
 
       {/* Background Timeline */}
       <section className="bg-slate-900 text-slate-300">
@@ -166,9 +149,9 @@ export default function AboutPage() {
       </section>
 
       {/* Software → Security */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-0 sm:px-6 py-24">
         <div className="mx-auto max-w-3xl">
-          <p className="mb-8 font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB]">
+          <p className="mb-8 font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB] px-6 sm:px-0">
             From software development to security
           </p>
 
@@ -213,8 +196,8 @@ export default function AboutPage() {
 
       {/* Certifications */}
       <section className="bg-slate-900 text-slate-300">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="mb-8 font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB]">
+        <div className="mx-auto max-w-6xl px-0 sm:px-6 py-20">
+          <p className="mb-8 font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB] px-6 sm:px-0">
             Certifications
           </p>
 

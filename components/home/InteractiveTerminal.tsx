@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import Link from "next/link";
 import TerminalWindow from "@/components/ui/TerminalWindow";
 
 const ETHOS =

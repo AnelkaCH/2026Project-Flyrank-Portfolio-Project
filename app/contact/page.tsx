@@ -53,8 +53,8 @@ const channels = [
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-20">
-      <header className="mb-12 max-w-2xl">
+    <main className="mx-auto max-w-6xl px-0 sm:px-6 py-20">
+      <header className="mb-12 max-w-2xl px-6 sm:px-0">
         <p className="mb-4 font-mono text-[#2563EB]">contact</p>
 
         <h1 className="mb-6 text-5xl font-bold">Let&apos;s talk</h1>
@@ -69,7 +69,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-2xl">
         <ContactForm />
 
-        <div className="mt-10">
+        <div className="mt-10 px-6 sm:px-0">
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
             Direct channels
           </p>
@@ -100,3 +100,4 @@ export default function ContactPage() {
     </main>
   );
 }
+
