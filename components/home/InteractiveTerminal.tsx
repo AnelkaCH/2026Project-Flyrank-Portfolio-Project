@@ -77,8 +77,6 @@ location: Jakarta, Indonesia`,
   whois      — who I am
   ethos      — the one line I'd want you to remember
   stack      — tools I work with
-  projects   — featured work, with links
-  experience — roles & internships
   contact    — how to reach me
   help       — this list`,
   },

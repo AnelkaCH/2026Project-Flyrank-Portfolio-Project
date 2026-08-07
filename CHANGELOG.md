@@ -1,5 +1,15 @@
 # Changelog
 
+# [2026-08-07] v0.4.1 - Fixed a typo in homepage terminal
+### Added
+- (none)
+
+### Changed
+- (none)
+
+### Fixed
+- Removed 'projects' and 'experience' from terminal options.
+
 ## [2026-08-07] v0.4 - Added the home page
 ### Added
 - `app/page.tsx` - Built the home page hero: intro heading, a Win95-style `codeavour_7.jpg` photo window, an interactive terminal, and a `meeting_request.txt` CTA window.
