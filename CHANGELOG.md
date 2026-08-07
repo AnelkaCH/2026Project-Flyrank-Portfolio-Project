@@ -1,5 +1,26 @@
 # Changelog
 
+## [2026-08-07] v0.4 - Added the home page
+### Added
+- `app/page.tsx` - Built the home page hero: intro heading, a Win95-style `codeavour_7.jpg` photo window, an interactive terminal, and a `meeting_request.txt` CTA window.
+- `components/home/InteractiveTerminal.tsx` - Interactive terminal that types out command output (`whois`, `ethos`, `stack`, `projects`, `experience`, `contact`, `help`) selected via clickable chips.
+- `components/home/HeroImageWindow.tsx` - Win95-style window showing the Codeavour 7 presentation photo.
+- `components/home/CtaWindow.tsx` - Win95-style CTA window with the "Let's have a 15-minute conversation" button.
+- `components/ui/Win95Window.tsx` - Reusable Win95 window shell (blue title bar, bevel window buttons).
+- `app/contact/page.tsx` - Built the contact page with a Win95-style form that opens a pre-filled `mailto:` message.
+- `components/contact/ContactForm.tsx` - Name / email / message form that composes the mailto link.
+- `lib/caseStudies.ts` - Shared case-study data used by both the case-studies page and the home page.
+
+### Changed
+- Replaced the placeholder home page with the hero, interactive terminal, and CTA window layout.
+- Replaced the placeholder contact page with the Win95 contact form and direct channels.
+- The case-studies page now reads from `lib/caseStudies.ts` instead of inline data.
+- Home hero image switched from the square portrait to the landscape Codeavour shot.
+- Used inline SVGs for the GitHub and LinkedIn icons on the contact page because `lucide-react@1.x` doesn't export brand icons.
+
+### Fixed
+- (none)
+
 ## [2026-08-06] v0.3 - Added the about page
 ### Added
 - More photos at `public/images/about/`
