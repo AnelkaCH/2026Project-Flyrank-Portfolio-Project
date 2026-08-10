@@ -6,12 +6,6 @@ Backend engineering internship, self-paced structured track
 
 Backend engineering work built through FlyRank's guided project track: a Node.js and Express CRUD API documented with Swagger, migrated to SQLite, then containerised with Docker and moved to PostgreSQL. Treated as one continuous system rather than three disconnected exercises, with each stage building on the constraints of the last.
 
-**Highlights**
-- REST API built with Node.js and Express, documented with Swagger from the start
-- Persistence layer migrated from an initial setup to SQLite, then to PostgreSQL
-- Full application containerised with Docker for environment consistency
-- Learned to keep a system coherent while its storage and deployment model changed underneath it
-
 ## The Problem
 
 Most of my earlier projects were single, static builds. FlyRank's track structured things differently: I had to keep an existing API working as its requirements shifted through documentation, then a storage migration, then containerisation. The challenge wasn't any one piece of code, it was keeping the whole system coherent as its foundations moved.
@@ -37,3 +31,9 @@ Docker and PostgreSQL together were the steepest part of the curve, mostly a str
 ## Outcome
 
 By the end, I was noticeably more comfortable with Docker, PostgreSQL, and reading unfamiliar error messages under pressure. The bigger shift was in how I think about backend systems generally: not as something built once, but as something that has to keep working as storage, documentation, and deployment requirements change around it.
+
+**Highlights**
+- REST API built with Node.js and Express, documented with Swagger from the start
+- Persistence layer migrated from an initial setup to SQLite, then to PostgreSQL
+- Full application containerised with Docker for environment consistency
+- Learned to keep a system coherent while its storage and deployment model changed underneath it

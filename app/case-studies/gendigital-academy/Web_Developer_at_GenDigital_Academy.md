@@ -6,12 +6,6 @@ Part-time web developer role, roughly one year
 
 Maintained and restructured GenDigital Academy's website and CMS, built on Wix, so non-technical staff could manage content confidently without developer support. First experience designing systems for people who weren't developers, not just for end users.
 
-**Highlights**
-- Reorganised CMS collections and content structure for long-term maintainability
-- Built a dynamic events page using CMS filtering, replacing a manually maintained static list
-- Documented changes so future non-technical contributors could update the site independently
-- First hands-on experience with CMS collection design
-
 ## The Problem
 
 GenDigital Academy runs digital literacy programmes across Indonesia, and the website needed to grow alongside them without requiring technical expertise for every update. The job wasn't to rebuild the site, it was to make an existing platform easier to maintain and expand.
@@ -29,3 +23,9 @@ Beyond the site itself, I also spent time supporting the programmes it existed f
 ## Outcome
 
 This project had less technical complexity than the others in my portfolio, but it shaped how I think about access and usability. Software that only works if a developer maintains it isn't solving the actual problem. The best technical solution is the one the people relying on it can actually use.
+
+**Highlights**
+- Reorganised CMS collections and content structure for long-term maintainability
+- Built a dynamic events page using CMS filtering, replacing a manually maintained static list
+- Documented changes so future non-technical contributors could update the site independently
+- First hands-on experience with CMS collection design

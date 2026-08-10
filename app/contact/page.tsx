@@ -55,13 +55,11 @@ export default function ContactPage() {
   return (
     <main className="mx-auto max-w-6xl px-0 sm:px-6 py-20">
       <header className="mb-12 max-w-2xl px-6 sm:px-0">
-        <p className="mb-4 font-mono text-[#2563EB]">contact</p>
-
-        <h1 className="mb-6 text-5xl font-bold">Let&apos;s talk</h1>
+        <h1 className="mb-6 text-5xl font-bold">Let's talk</h1>
 
         <p className="text-lg text-slate-600">
-          I&apos;m happiest talking about real problems and building things
-          responsibly. If you want to chat, the form below opens your email app
+          Other than building projects, I love talking about them with others. 
+          If you want to chat, the form below opens your email app
           with the message ready to send.
         </p>
       </header>

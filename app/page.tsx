@@ -25,7 +25,7 @@ export default function Home() {
 
             <div>
               <h1 className="mb-6 text-5xl font-bold">
-                Hi, I&apos;m Anelka
+                Hi, I'm Anelka
               </h1>
 
               <p className="text-lg text-slate-600">
@@ -73,9 +73,9 @@ export default function Home() {
         <div className="mt-8 text-center px-6 sm:px-0">
           <Link
             href="/case-studies"
-            className="font-mono text-sm text-[#2563EB] hover:text-[#06B6D4] transition duration-150 inline-flex items-center gap-1.5"
+            className="font-mono text-sm font-bold text-[#2563EB] hover:text-[#06B6D4] transition"
           >
-            <span>&rarr;</span> View all case studies
+            View all case studies &rarr;
           </Link>
         </div>
       </section>

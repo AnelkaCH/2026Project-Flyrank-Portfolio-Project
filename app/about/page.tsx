@@ -64,7 +64,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="max-w-xl text-lg text-slate-600 mb-4">
-              Incoming Computer Science &amp; Design (Security) student at SUTD.
+              Incoming Computer Science & Design (Security) student at SUTD.
               Moving from building software to securing it.
             </p>
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="grid gap-12 lg:grid-cols-[240px_1fr]">
             <p className="font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB] lg:sticky lg:top-8 lg:self-start">
-              Past, Present, &amp; Future
+              Past, Present, & Future
             </p>
 
             <ol className="relative space-y-12 border-l-2 border-slate-700 pl-8">
@@ -224,7 +224,7 @@ export default function AboutPage() {
                     <h2 className="text-2xl font-bold">SC-900</h2>
 
                     <p className="mb-4 text-slate-500">
-                      Security, Compliance &amp; Identity Fundamentals
+                      Security, Compliance & Identity Fundamentals
                     </p>
 
                     <span className="mb-5 inline-block rounded-full border border-[#06B6D4]/30 bg-[#06B6D4]/10 px-3 py-1 text-sm font-medium text-[#06B6D4]">
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 label: "Next Goal",
                 content: (
                   <div className="mx-auto max-w-3xl">
-                    <h2 className="mb-4 text-2xl font-bold">What&apos;s Next</h2>
+                    <h2 className="mb-4 text-2xl font-bold">What's Next</h2>
 
                     <ul className="mb-6 space-y-3">
                       {["Security+", "Cloud security (AWS / Azure)"].map(

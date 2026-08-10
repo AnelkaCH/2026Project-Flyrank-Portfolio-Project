@@ -6,14 +6,6 @@ Personal project, ongoing since June 2026, currently at v2.3.2
 
 An automated internship tracker that queries public applicant tracking system APIs, filters and classifies listings, and notifies me when something relevant appears. Built with a focus on operating within platform rules rather than around them: robots.txt compliance, rate limiting with backoff, adapter-based integration across 10+ ATS platforms, and secrets scanning baked into the commit workflow.
 
-**Highlights**
-- Adapter pattern supporting 10+ applicant tracking systems, each with different response formats
-- Tiered classification system with a hard stop rule to filter irrelevant listings automatically
-- robots.txt compliance and exponential backoff with jitter on every request
-- Separate operational and audit logs for traceability
-- detect-secrets pre-commit hook to catch credentials before they reach version control
-- 33+ unit tests, with ARCHITECTURE.md and CHANGELOG.md maintained alongside the code
-
 ## The Problem
 
 Companies post openings across dozens of different applicant tracking systems, each with its own API, format, and update cadence. Checking them manually every day was repetitive and easy to get wrong. I wanted a monitor, not a scraper: something that watched approved sources responsibly rather than pulling as much data as possible.
@@ -43,3 +35,11 @@ More broadly, there's no standard job API. Every provider structures data differ
 ## Outcome
 
 The monitor currently tracks 10+ sources and has been running long enough to catch listings I would otherwise have missed. More importantly, it forced me to think about automation as something with obligations attached: respecting platform terms, logging for accountability, and treating secrets and rate limits as defaults rather than afterthoughts. That mindset is the throughline I'd want a hiring manager to take from this project.
+
+**Highlights**
+- Adapter pattern supporting 10+ applicant tracking systems, each with different response formats
+- Tiered classification system with a hard stop rule to filter irrelevant listings automatically
+- robots.txt compliance and exponential backoff with jitter on every request
+- Separate operational and audit logs for traceability
+- detect-secrets pre-commit hook to catch credentials before they reach version control
+- 33+ unit tests, with ARCHITECTURE.md and CHANGELOG.md maintained alongside the code

@@ -19,16 +19,16 @@ interface Command {
 
 const commands: Record<string, Command> = {
   whois: {
-    text: `Anelka Cornelius Hariyanto. About: security-minded developer based in Jakarta, Indonesia.
-Formerly full-stack web development, now shifting toward security and governance.
-Got into security after being hacked as a kid — 'I know what losing control of your own stuff feels like, and I've cared more about preventing harm than shipping features ever since.'`,
+    text: `Subject: Anelka Cornelius Hariyanto
+About: A security-minded developer based in Jakarta, Indonesia. Formerly full-stack web development, now shifting toward security and governance.
+Got into security after being hacked as a kid: 'I know what losing control of your own stuff feels like, and I've cared more about preventing harm than shipping features ever since.'`,
   },
   ethos: {
     text: ETHOS,
   },
   stack: {
-    text: `languages: Python, TypeScript, C# (.NET)
-frontend: React, Next.js, Wix CMS
+    text: `languages: Python, Javascript, TypeScript, C# (.NET), C++
+frontend: React, Next.js
 backend: Node.js, Express, PostgreSQL, SQLite, Docker, Supabase
 security practice: detect-secrets, rate limiting w/ backoff, robots.txt compliance, audit logs`,
   },
@@ -73,11 +73,11 @@ location: Jakarta, Indonesia`,
   },
   help: {
     text: `available commands:
-  whois      — who I am
-  ethos      — the one line I'd want you to remember
-  stack      — tools I work with
-  contact    — how to reach me
-  help       — this list`,
+  whois      -> who I am
+  ethos      -> the one line I'd want you to remember
+  stack      -> tools I work with
+  contact    -> how to reach me
+  help       -> this list`,
   },
 };
 
@@ -132,7 +132,7 @@ export default function InteractiveTerminal() {
   return (
     <TerminalWindow title="anelka@portfolio">
       <p className="mb-4 font-mono text-xs text-slate-500">
-        # interactive mode — click a command below
+        entering interactive mode. please click a command below
       </p>
 
       <div className="font-mono text-sm leading-relaxed">
