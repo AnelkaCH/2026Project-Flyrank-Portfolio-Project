@@ -29,8 +29,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-slate-600">
-                A Security-Focused Full Stack Developer, passionate about building
-                secure and reliable software.
+                A young full stack developer pivoting to security, and now heading to Singapore.
               </p>
             </div>
 
@@ -50,10 +49,10 @@ export default function Home() {
         <div className="mx-auto max-w-2xl px-0 sm:px-6">
           <div className="px-6 sm:px-0 mb-8">
             <h2 className="text-3xl font-bold">
-              The Interactive Console
+              The 'Quick-Facts' Console
             </h2>
             <p className="mt-2 text-sm">
-              Get to know me quickly (my journey, my claims, and many more) by interacting with the console below. Click on a command to see its output.
+              Get to know me more (my journey, my claims, and many more) by interacting with the console below. Click on a command to see its output.
             </p>
           </div>
           <InteractiveTerminal />

@@ -8,21 +8,21 @@ const featuredWork = [
   {
     title: "Job Monitoring System",
     description:
-      "Highlights: A solution in job hunting that includes adapter pattern across 10+ ATS platforms, robots.txt compliant, rate limited with backoff.",
+      "Highlights: A solution in job hunting that notifies me when a new job posting matches my criteria, without me manually checking. It includes adapter pattern across 10+ ATS platforms, robots.txt compliant, rate limited with backoff.",
     image: "/images/case-studies/job-monitoring-system/main-photo.png",
     link: "/case-studies/job-monitoring-system",
   },
   {
     title: "Accelist Internship",
     description:
-      "Highlights: Working with the whole stack, projects include event-driven integration syncing two production systems via APIs and webhooks.",
+      "Highlights: Working with the whole stack, Next.js and React for frontend and .Net for backend. Projects include event-driven integration syncing two production systems (e.g. Odoo) via APIs and webhooks.",
     image: "/images/case-studies/accelist/main-photo.png",
     link: "/case-studies/accelist-lentera-indonesia",
   },
   {
     title: "FlyRank AI Internship",
     description:
-      "Highlights: Working with Backend tools, and projects include Node/Express API taken through SQLite, Docker, and PostgreSQL.",
+      "Highlights: Working with modern AI tools to create backend solutions. Projects include Node/Express API taken through SQLite, Docker, and PostgreSQL and integration with Supabase.",
     image: "/images/case-studies/flyrank-ai/main-photo.png",
     link: "/case-studies/flyrank-ai",
   },

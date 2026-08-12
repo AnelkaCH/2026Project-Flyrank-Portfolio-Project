@@ -2,10 +2,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Win95Button from "@/components/ui/Win95Button";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === "/case-studies"
+      ? pathname === href || pathname.startsWith(`${href}/`)
+      : pathname === href;
 
   return (
     <nav className="bg-slate-900 text-slate-300">
@@ -16,25 +31,17 @@ export default function Navbar() {
         </span>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-6 md:flex">
-          <Link href="/" className="transition hover:text-[#06B6D4]">
-            Home
-          </Link>
-
-          <Link href="/about" className="transition hover:text-[#06B6D4]">
-            About
-          </Link>
-
-          <Link
-            href="/case-studies"
-            className="transition hover:text-[#06B6D4]"
-          >
-            Case Studies
-          </Link>
-
-          <Link href="/contact" className="transition hover:text-[#06B6D4]">
-            Contact
-          </Link>
+        <div className="hidden items-center gap-2 md:flex">
+          {navLinks.map((link) => (
+            <Win95Button
+              key={link.href}
+              href={link.href}
+              accent={link.href === "/contact"}
+              active={isActive(link.href)}
+            >
+              {link.label}
+            </Win95Button>
+          ))}
         </div>
 
         {/* Hamburger Button */}
@@ -49,38 +56,19 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden">
-          <div className="flex flex-col px-6 py-4">
-            <Link
-              href="/"
-              className="py-2 hover:text-[#06B6D4]"
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </Link>
-
-            <Link
-              href="/about"
-              className="py-2 hover:text-[#06B6D4]"
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </Link>
-
-            <Link
-              href="/case-studies"
-              className="py-2 hover:text-[#06B6D4]"
-              onClick={() => setMenuOpen(false)}
-            >
-              Case Studies
-            </Link>
-
-            <Link
-              href="/contact"
-              className="py-2 hover:text-[#06B6D4]"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </Link>
+          <div className="flex flex-col items-stretch gap-2 px-6 py-4">
+            {navLinks.map((link) => (
+              <Win95Button
+                key={link.href}
+                href={link.href}
+                accent={link.href === "/contact"}
+                active={isActive(link.href)}
+                className="w-full text-center"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Win95Button>
+            ))}
           </div>
         </div>
       )}

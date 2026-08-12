@@ -9,7 +9,7 @@
   --cyan: #06B6D4;
 
   /* Fonts (these will come from next/font) */
-  --font-body: var(--font-inter);
+  --font-body: var(--font-space-grotesk);
   --font-heading: var(--font-space);
 }
 

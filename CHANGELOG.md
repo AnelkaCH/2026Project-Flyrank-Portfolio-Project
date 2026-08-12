@@ -1,5 +1,22 @@
 # Changelog
 
+## [2026-08-12] v0.6 - Win95 nav buttons, scrollbar removal, and Space Grotesk
+### Added
+- `components/ui/Win95Button.tsx` — Reusable Win95-style button (renders a `next/link` Link). Gray `#c0c0c0` base with 2 px outset bevel (`#ffffff` top/left, `#808080` right/bottom), press-down nudge, a pressed-in "current page" state, and a navy `#000080` accent variant.
+
+### Changed
+- **`components/layout/Navbar.tsx`** — Desktop links and mobile menu rebuilt on `Win95Button`. The current page renders "pressed in" via inverted-bevel styling (`usePathname`; the Case Studies link stays active on its sub-routes). The Contact button uses the distinct navy `#000080` accent for emphasis.
+- **`app/globals.css`** — Removed the page scrollbar entirely (`scrollbar-width: none`, `::--webkit-scrollbar { display: none }`), keeping wheel / touch / keyboard scrolling. Replaced the earlier auto-hiding scrollbar approach. `--font-body` now maps to the Space Grotesk variable.
+- **`app/layout.tsx`** — Swapped the body font from Inter to Space Grotesk (`--font-space-grotesk`). Space Mono remains for headings.
+- **`app/page.tsx`** — Updated the hero subheading to "A young full stack developer pivoting to security, and now heading to Singapore" and retitled the terminal section to the 'Quick-Facts' Console.
+- **`components/home/FeaturedWorkSlider.tsx`** — Expanded the Featured Work descriptions for all three projects.
+- **`components/home/InteractiveTerminal.tsx`** — Renamed commands `whois` → `who` and `ethos` → `claim`, rewrote the `claim` line, and updated the `stack` command (added MySQL, clarified security practices).
+
+### Fixed
+- Removed the intrusive default scrollbar and its reserved right-edge gutter, which cut through full-bleed dark sections as a visible light line.
+
+---
+
 ## [2026-08-07] v0.5 - Win95 retro redesign across all pages
 ### Added
 - - `components/home/FeaturedWorkSlider.tsx` — Auto-advancing Win95 carousel (5 s interval, pauses on hover/focus) for the Featured Work section. Includes inset image viewport, filename-style title, one-line description, beveled "View Case Study" button, and inset dot navigation.
