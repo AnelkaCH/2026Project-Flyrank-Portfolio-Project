@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      {/* Hero — full width grid: text+status left, photo right */}
+      {/* Hero - full width grid: text+status left, photo right */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 pt-16 pb-14 sm:pt-24 sm:pb-20">
 
         <div className="grid min-w-0 items-stretch gap-8 lg:grid-cols-[2fr_1fr] w-full">

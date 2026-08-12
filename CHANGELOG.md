@@ -2,15 +2,15 @@
 
 ## [2026-08-12] v0.6 - Win95 nav buttons, scrollbar removal, and Space Grotesk
 ### Added
-- `components/ui/Win95Button.tsx` — Reusable Win95-style button (renders a `next/link` Link). Gray `#c0c0c0` base with 2 px outset bevel (`#ffffff` top/left, `#808080` right/bottom), press-down nudge, a pressed-in "current page" state, and a navy `#000080` accent variant.
+- `components/ui/Win95Button.tsx` - Reusable Win95-style button (renders a `next/link` Link). Gray `#c0c0c0` base with 2 px outset bevel (`#ffffff` top/left, `#808080` right/bottom), press-down nudge, a pressed-in "current page" state, and a navy `#000080` accent variant.
 
 ### Changed
-- **`components/layout/Navbar.tsx`** — Desktop links and mobile menu rebuilt on `Win95Button`. The current page renders "pressed in" via inverted-bevel styling (`usePathname`; the Case Studies link stays active on its sub-routes). The Contact button uses the distinct navy `#000080` accent for emphasis.
-- **`app/globals.css`** — Removed the page scrollbar entirely (`scrollbar-width: none`, `::--webkit-scrollbar { display: none }`), keeping wheel / touch / keyboard scrolling. Replaced the earlier auto-hiding scrollbar approach. `--font-body` now maps to the Space Grotesk variable.
-- **`app/layout.tsx`** — Swapped the body font from Inter to Space Grotesk (`--font-space-grotesk`). Space Mono remains for headings.
-- **`app/page.tsx`** — Updated the hero subheading to "A young full stack developer pivoting to security, and now heading to Singapore" and retitled the terminal section to the 'Quick-Facts' Console.
-- **`components/home/FeaturedWorkSlider.tsx`** — Expanded the Featured Work descriptions for all three projects.
-- **`components/home/InteractiveTerminal.tsx`** — Renamed commands `whois` → `who` and `ethos` → `claim`, rewrote the `claim` line, and updated the `stack` command (added MySQL, clarified security practices).
+- **`components/layout/Navbar.tsx`** - Desktop links and mobile menu rebuilt on `Win95Button`. The current page renders "pressed in" via inverted-bevel styling (`usePathname`; the Case Studies link stays active on its sub-routes). The Contact button uses the distinct navy `#000080` accent for emphasis.
+- **`app/globals.css`** - Removed the page scrollbar entirely (`scrollbar-width: none`, `::--webkit-scrollbar { display: none }`), keeping wheel / touch / keyboard scrolling. Replaced the earlier auto-hiding scrollbar approach. `--font-body` now maps to the Space Grotesk variable.
+- **`app/layout.tsx`** - Swapped the body font from Inter to Space Grotesk (`--font-space-grotesk`). Space Mono remains for headings.
+- **`app/page.tsx`** - Updated the hero subheading to "A young full stack developer pivoting to security, and now heading to Singapore" and retitled the terminal section to the 'Quick-Facts' Console.
+- **`components/home/FeaturedWorkSlider.tsx`** - Expanded the Featured Work descriptions for all three projects.
+- **`components/home/InteractiveTerminal.tsx`** - Renamed commands `whois` → `who` and `ethos` → `claim`, rewrote the `claim` line, and updated the `stack` command (added MySQL, clarified security practices).
 
 ### Fixed
 - Removed the intrusive default scrollbar and its reserved right-edge gutter, which cut through full-bleed dark sections as a visible light line.
@@ -19,27 +19,27 @@
 
 ## [2026-08-07] v0.5 - Win95 retro redesign across all pages
 ### Added
-- - `components/home/FeaturedWorkSlider.tsx` — Auto-advancing Win95 carousel (5 s interval, pauses on hover/focus) for the Featured Work section. Includes inset image viewport, filename-style title, one-line description, beveled "View Case Study" button, and inset dot navigation.
+- - `components/home/FeaturedWorkSlider.tsx` - Auto-advancing Win95 carousel (5 s interval, pauses on hover/focus) for the Featured Work section. Includes inset image viewport, filename-style title, one-line description, beveled "View Case Study" button, and inset dot navigation.
 - Replaced the old `FeaturedPipeline.tsx` with the new `FeaturedWorkSlider.tsx`.
 
 ### Changed
-- **`components/ui/Win95Window.tsx`** — Full redesign to authentic Win95 spec: 2 px outset bevel border (`#ffffff / #808080`), solid `#000080` navy title bar, monospace text, and sharp corners throughout. Added `className` prop for external sizing control. Window control buttons now use text characters (`_`, `□`, `x`) with outset bevel borders and an active press-down offset.
-- **`components/home/CurrentStatus.tsx`** — Wrapped in `Win95Window` (`C:\STATUS.EXE`). Header row shows amber status dot + "PARTIALLY OPERATIONAL" label. Status rows rendered inside an inset screen panel with fixed Win95 colors: green `#008000`, amber `#b8860b`, navy `#000080`. Accepts `className` prop for grid height alignment.
-- **`components/home/HeroImageWindow.tsx`** — Accepts `className` prop; image div uses `flex-1 min-h` for equal-height stretching in the hero grid.
-- **`components/home/CtaWindow.tsx`** — Replaced modern rounded button/shadow styles with Win95 inset content panel and beveled outset CTA button.
-- **`components/contact/ContactForm.tsx`** — Inputs and textarea restyled as authentic inset Win95 fields. Submit button now uses outset bevel with active press-down shift.
-- **`components/case-study/CaseStudyWindow.tsx`** — Replaced custom gradient title bar with `Win95Window`. Tab strip uses outset bevel folder tabs; card content sits in an inset panel; project cards use outset bevel borders, inset image viewports, and Win95-style "View Case Study" buttons.
-- **`components/case-study/CaseStudyBrowser.tsx`** — Same as above: migrated to `Win95Window` with folder-tab navigation and inset content panel. Monospace text throughout.
-- **`components/ui/BrowserTabs.tsx`** — Migrated from custom gradient title bar to `Win95Window`. Folder tabs use the same outset bevel style; content area uses inset panel.
-- **`app/about/page.tsx`** — Portrait image window replaced with `Win95Window` component. Section containers updated to `px-0 sm:px-6` for mobile edge-to-edge stretching.
-- **`app/page.tsx`** — Layout restructured: Current Status moved into the hero grid (left column alongside the photo); Interactive Terminal moved to its own dark `bg-slate-900` contrast section below. Section max-widths unified. All Win95 window containers now use `px-0 sm:px-6` for edge-to-edge mobile stretch.
-- **`app/case-studies/page.tsx`** and **`app/contact/page.tsx`** — Section padding changed to `px-0 sm:px-6` so Win95 windows stretch edge-to-edge on mobile.
+- **`components/ui/Win95Window.tsx`** - Full redesign to authentic Win95 spec: 2 px outset bevel border (`#ffffff / #808080`), solid `#000080` navy title bar, monospace text, and sharp corners throughout. Added `className` prop for external sizing control. Window control buttons now use text characters (`_`, `□`, `x`) with outset bevel borders and an active press-down offset.
+- **`components/home/CurrentStatus.tsx`** - Wrapped in `Win95Window` (`C:\STATUS.EXE`). Header row shows amber status dot + "PARTIALLY OPERATIONAL" label. Status rows rendered inside an inset screen panel with fixed Win95 colors: green `#008000`, amber `#b8860b`, navy `#000080`. Accepts `className` prop for grid height alignment.
+- **`components/home/HeroImageWindow.tsx`** - Accepts `className` prop; image div uses `flex-1 min-h` for equal-height stretching in the hero grid.
+- **`components/home/CtaWindow.tsx`** - Replaced modern rounded button/shadow styles with Win95 inset content panel and beveled outset CTA button.
+- **`components/contact/ContactForm.tsx`** - Inputs and textarea restyled as authentic inset Win95 fields. Submit button now uses outset bevel with active press-down shift.
+- **`components/case-study/CaseStudyWindow.tsx`** - Replaced custom gradient title bar with `Win95Window`. Tab strip uses outset bevel folder tabs; card content sits in an inset panel; project cards use outset bevel borders, inset image viewports, and Win95-style "View Case Study" buttons.
+- **`components/case-study/CaseStudyBrowser.tsx`** - Same as above: migrated to `Win95Window` with folder-tab navigation and inset content panel. Monospace text throughout.
+- **`components/ui/BrowserTabs.tsx`** - Migrated from custom gradient title bar to `Win95Window`. Folder tabs use the same outset bevel style; content area uses inset panel.
+- **`app/about/page.tsx`** - Portrait image window replaced with `Win95Window` component. Section containers updated to `px-0 sm:px-6` for mobile edge-to-edge stretching.
+- **`app/page.tsx`** - Layout restructured: Current Status moved into the hero grid (left column alongside the photo); Interactive Terminal moved to its own dark `bg-slate-900` contrast section below. Section max-widths unified. All Win95 window containers now use `px-0 sm:px-6` for edge-to-edge mobile stretch.
+- **`app/case-studies/page.tsx`** and **`app/contact/page.tsx`** - Section padding changed to `px-0 sm:px-6` so Win95 windows stretch edge-to-edge on mobile.
 - Removed internal `max-w-2xl` cap from `FeaturedWorkSlider.tsx`; width is now driven by the parent section.
 - Changed the Terminal, Featured Work, and CTA sections in `app/page.tsx` to all use `max-w-2xl` so every standalone Win95 window is identically sized.
 - Hero grid stays at `max-w-6xl` (two-column layout, not a standalone window).
 
 ### Fixed
-- Width inconsistency across Win95 windows on the homepage — they were previously three different widths.
+- Width inconsistency across Win95 windows on the homepage - they were previously three different widths.
 
 ---
 
