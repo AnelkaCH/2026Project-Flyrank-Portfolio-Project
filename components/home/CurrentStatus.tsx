@@ -1,8 +1,8 @@
 import Win95Window from "@/components/ui/Win95Window";
 
-{/* Operational: #008000*/}
-{/* In Progress: #b8860b*/}
-{/* Scheduled: #000080*/}
+// Operational: #008000
+// In Progress: #b8860b
+// Scheduled: #000080
 const statusItems = [
   {
     id: "accelist-internship",

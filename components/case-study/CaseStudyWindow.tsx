@@ -91,7 +91,6 @@ export default function CaseStudyWindow({
                   borderColor: "#808080 #ffffff #ffffff #808080",
                 }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={card.imageref}
                   alt={card.imagealt}

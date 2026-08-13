@@ -70,7 +70,6 @@ export default function FeaturedWorkSlider() {
               borderColor: "#808080 #ffffff #ffffff #808080",
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={currentSlide.image}
               alt={currentSlide.title}

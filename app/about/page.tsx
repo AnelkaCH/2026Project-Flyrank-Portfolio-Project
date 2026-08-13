@@ -55,7 +55,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
 
-      {/* Hero */}
+      {/* About Me */}
       <section className="mx-auto max-w-6xl px-0 sm:px-6 py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="px-6 sm:px-0">
@@ -148,7 +148,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Software → Security */}
+      {/* Software to Security */}
       <section className="mx-auto max-w-6xl px-0 sm:px-6 py-24">
         <div className="mx-auto max-w-3xl">
           <p className="mb-8 font-mono text-sm uppercase tracking-[0.2em] text-[#2563EB] px-6 sm:px-0">
