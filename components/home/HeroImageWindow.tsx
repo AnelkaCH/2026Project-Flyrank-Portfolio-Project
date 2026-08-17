@@ -8,10 +8,10 @@ interface HeroImageWindowProps {
 export default function HeroImageWindow({ className = "" }: HeroImageWindowProps) {
   return (
     <div className={`overflow-hidden shadow-xl ${className}`}>
-      <Win95Window title="anelka_working.jpg" className="h-full">
+      <Win95Window title="anelka.jpeg" className="h-full">
         <div className="relative flex-1 w-full min-h-[220px]">
           <Image
-            src="/images/case-studies/default/darwin-iot-codeavour-7.jpeg"
+            src="/images/about/anelka-photo.jpeg"
             alt="Anelka presenting the Darwin IoT robot at Codeavour 7"
             fill
             sizes="(min-width: 1024px) 58vw, 100vw"

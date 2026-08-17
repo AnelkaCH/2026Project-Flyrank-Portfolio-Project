@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto w-full max-w-sm">
-            <Win95Window title="portrait.jpg">
+            <Win95Window title="grad-photo.jpeg">
               <div
                 className="relative w-full aspect-[4/5] overflow-hidden"
                 style={{
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 }}
               >
                 <Image
-                  src="/images/about/anelka-photo.jpeg"
+                  src="/images/about/grad-photo.jpeg"
                   alt="Portrait of Anelka, smiling and wearing a black t-shirt, with a blurred background of trees and sunlight"
                   fill
                   sizes="(min-width: 1024px) 24rem, 100vw"
