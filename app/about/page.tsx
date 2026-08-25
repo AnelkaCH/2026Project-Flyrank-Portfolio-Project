@@ -228,12 +228,8 @@ export default function AboutPage() {
                     </p>
 
                     <span className="mb-5 inline-block rounded-full border border-[#06B6D4]/30 bg-[#06B6D4]/10 px-3 py-1 text-sm font-medium text-[#06B6D4]">
-                      In Progress
+                      Earned
                     </span>
-
-                    <p className="mb-3 text-slate-600">
-                      Exam voucher secured.
-                    </p>
 
                     <p className="text-slate-600">
                       Covers security, compliance, and identity concepts for
