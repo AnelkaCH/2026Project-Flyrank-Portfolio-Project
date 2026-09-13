@@ -1,5 +1,12 @@
 # Changelog
 
+## [2026-09-14] v0.7 - New Project and Information Update
+### Added
+- A new project called `Building an Auth API with Supabase` is added to `personal projects`
+
+### Changed
+- Changed info about the internships to reflect current events (they're finished).
+
 ## [2026-08-12] v0.6 - Win95 nav buttons, scrollbar removal, and Space Grotesk
 ### Added
 - `components/ui/Win95Button.tsx` - Reusable Win95-style button (renders a `next/link` Link). Gray `#c0c0c0` base with 2 px outset bevel (`#ffffff` top/left, `#808080` right/bottom), press-down nudge, a pressed-in "current page" state, and a navy `#000080` accent variant.

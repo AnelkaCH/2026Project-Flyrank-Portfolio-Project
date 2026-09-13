@@ -27,7 +27,7 @@ const statusItems = [
   },
   {
     id: "sc-900-exam",
-    label: "SC-900 Exam",
+    label: "SC-900",
     status: "completed",
     description: "Fully Certified",
     color: "#008000",
