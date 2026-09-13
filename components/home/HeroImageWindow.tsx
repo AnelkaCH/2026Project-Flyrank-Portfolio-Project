@@ -11,7 +11,7 @@ export default function HeroImageWindow({ className = "" }: HeroImageWindowProps
       <Win95Window title="anelka.jpeg" className="h-full">
         <div className="relative flex-1 w-full min-h-[220px]">
           <Image
-            src="/images/about/anelka-photo.jpeg"
+            src="/images/about/anelka-photo-extra.jpeg"
             alt="Anelka presenting the Darwin IoT robot at Codeavour 7"
             fill
             sizes="(min-width: 1024px) 58vw, 100vw"

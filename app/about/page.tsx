@@ -26,26 +26,26 @@ const values = [
 
 const milestones = [
   {
-    phase: "Then",
-    title: "Where it started",
+    phase: "1)",
+    title: "How it started",
     description:
-      "As a kid, I have always had a huge interest in tech. It started with building games on Roblox during elementary, then it led to coding bootcamps and competitions like UNTAR Meta Spark and Codeavour 6.0 and 7.0, where I built many more projects, ranging from AR programs to IoT systems.",
+      "I have always had a huge interest in tech. It started with building games on Roblox during elementary, then it led to coding bootcamps and competitions like UNTAR Meta Spark and Codeavour 6.0 and 7.0, where I built many more projects, ranging from AR programs to IoT systems.",
     src: "/images/case-studies/default/darwin-iot-codeavour-7.jpeg",
     alt: "Anelka presenting the Darwin IoT robot at Codeavour 7",
   },
   {
-    phase: "Now",
-    title: "Working across multiple stacks at once",
+    phase: "2)",
+    title: "How it progressed",
     description:
-      "I have experienced working with a full stack like GenDigital Academy's organisational website. Currently a Full Stack Developer Intern at Accelist Lentera Indonesia (.NET, React) and Backend AI Engineering Intern at FlyRank AI, working in parallel across two different environments.",
+      "I have experienced working with the industry, such as being a Website Developer @ GenDigital Academy, Junior Software Engineer Intern @ Accelist Lentera Indonesia, and Backend AI Engineering Intern @ FlyRank AI.",
     src: "/images/about/background/gend.jpeg",
     alt: "Picture with the GenDigital Academy team, taken during a team building event in 2025",
   },
   {
-    phase: "Next",
-    title: "SUTD, September 2026",
+    phase: "3)",
+    title: "How it is now and will be",
     description:
-      "Soon a new chapter will begin in my life. I will be studying Computer Science and Design with a security focus, on the ASEAN Undergraduate Scholarship.",
+      "Now, I study @ SUTD, on the ASEAN Undergraduate Scholarship. In this new chapterI plan to expand my knowledge in cybersecurity, through university lectures and personal learning. I also plan to push myself further by creating my own projects and getting certified in security, such as the Security+ and cloud security certifications.",
     src: "/images/about/background/sutd.jpg",
     alt: "SUTD campus",
   },

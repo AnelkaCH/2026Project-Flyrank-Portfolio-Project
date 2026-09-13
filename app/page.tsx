@@ -28,7 +28,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-slate-600">
-                A young full stack developer pivoting to security, and now heading to Singapore.
+                A young developer pivoting to security, and now heading to Singapore.
               </p>
             </div>
 
