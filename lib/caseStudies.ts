@@ -35,6 +35,16 @@ export const caseStudies: CaseStudyEntry[] = [
     href: "/case-studies/password-strength-checker",
   },
   {
+    title: "Building an Auth API with Supabase",
+    tabtag: "personal project",
+    description:
+      "Backend authentication API, built with Supabase and Swagger.",
+    tags: ["Express", "Supabase", "JWT", "Swagger"],
+    imageref: "/images/case-studies/auth-api/auth-api.png",
+    imagealt: "Auth API Screenshot",
+    href: "/case-studies/auth-api",
+  },
+  {
     title: "Interning @ Accelist Lentera Indonesia",
     tabtag: "professional experience",
     description:
