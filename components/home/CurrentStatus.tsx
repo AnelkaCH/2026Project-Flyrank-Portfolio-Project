@@ -1,38 +1,6 @@
 import Win95Window from "@/components/ui/Win95Window";
-
-// Operational: #008000
-// In Progress: #b8860b
-// Scheduled: #000080
-const statusItems = [
-  {
-    id: "sutd",
-    label: "SUTD",
-    status: "on-going",
-    description: "Year 1 Student",
-    color: "#b8860b",
-  },
-  {
-    id: "accelist-internship",
-    label: "Accelist Internship",
-    status: "completed",
-    description: "Junior Software Engineer Intern",
-    color: "#008000",
-  },
-  {
-    id: "flyrank-backend",
-    label: "Flyrank AI Internship",
-    status: "completed",
-    description: "Backend AI Engineering Intern",
-    color: "#008000",
-  },
-  {
-    id: "sc-900-exam",
-    label: "SC-900",
-    status: "completed",
-    description: "Fully Certified",
-    color: "#008000",
-  },
-] as const;
+import Win95Inset from "@/components/ui/Win95Inset";
+import { statusTimeline } from "@/lib/statusTimeline";
 
 interface CurrentStatusProps {
   className?: string;
@@ -54,16 +22,9 @@ export default function CurrentStatus({ className = "" }: CurrentStatusProps) {
         </div>
 
         {/* Inset Screen Panel */}
-        <div
-          className="p-3 bg-white text-black flex-1 flex flex-col justify-between"
-          style={{
-            borderStyle: "inset",
-            borderWidth: "2px",
-            borderColor: "#808080 #ffffff #ffffff #808080",
-          }}
-        >
+        <Win95Inset className="p-3 bg-white text-black flex-1 flex flex-col justify-between">
           <div className="space-y-4 flex-1 flex flex-col justify-around">
-            {statusItems.map((item) => (
+            {statusTimeline.map((item) => (
               <div
                 key={item.id}
                 className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 pb-3 last:pb-0 border-b border-dashed border-gray-200 last:border-0"
@@ -89,7 +50,7 @@ export default function CurrentStatus({ className = "" }: CurrentStatusProps) {
               </div>
             ))}
           </div>
-        </div>
+        </Win95Inset>
       </Win95Window>
     </div>
   );

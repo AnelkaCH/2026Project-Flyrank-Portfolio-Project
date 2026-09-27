@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Win95Window from "@/components/ui/Win95Window";
+import Win95Inset from "@/components/ui/Win95Inset";
+import Win95Button from "@/components/ui/Win95Button";
 
 export interface CaseStudyWindowCard {
   title: string;
@@ -60,43 +61,26 @@ export default function CaseStudyWindow({
       </div>
 
       {/* Content panel */}
-      <div
+      <Win95Inset
         role="tabpanel"
         id={`window-panel-${activeIndex}`}
         aria-labelledby={`window-tab-${activeIndex}`}
         className="p-4 sm:p-6 bg-white text-black mt-2"
-        style={{
-          borderStyle: "inset",
-          borderWidth: "2px",
-          borderColor: "#808080 #ffffff #ffffff #808080",
-        }}
       >
         <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
           {activeTab.cards.map((card) => (
             <article
               key={card.title}
-              className="flex flex-col p-4 bg-[#c0c0c0] text-black"
-              style={{
-                borderStyle: "outset",
-                borderWidth: "2px",
-                borderColor: "#ffffff #808080 #808080 #ffffff",
-              }}
+              className="flex flex-col p-4 win95-outset text-black"
             >
               {/* Photo Inset Box */}
-              <div
-                className="mb-4 w-full aspect-video bg-black overflow-hidden flex items-center justify-center"
-                style={{
-                  borderStyle: "inset",
-                  borderWidth: "2px",
-                  borderColor: "#808080 #ffffff #ffffff #808080",
-                }}
-              >
+              <Win95Inset className="mb-4 w-full aspect-video bg-black overflow-hidden flex items-center justify-center">
                 <img
                   src={card.imageref}
                   alt={card.imagealt}
                   className="object-cover w-full h-full"
                 />
-              </div>
+              </Win95Inset>
 
               <h3 className="mb-2 text-base font-bold text-blue-900 font-mono">
                 {card.title}
@@ -108,32 +92,25 @@ export default function CaseStudyWindow({
 
               <div className="mb-4 flex flex-wrap gap-1.5">
                 {card.tags.map((tag) => (
-                  <span
+                  <Win95Inset
                     key={tag}
+                    small
                     className="px-2 py-0.5 text-[10px] font-mono font-bold bg-white text-gray-800"
-                    style={{
-                      borderStyle: "inset",
-                      borderWidth: "1.5px",
-                      borderColor: "#808080 #ffffff #ffffff #808080",
-                    }}
                   >
                     {tag}
-                  </span>
+                  </Win95Inset>
                 ))}
               </div>
 
               <div className="mt-auto">
-                <Link
-                  href={card.href}
-                  className="inline-block px-4 py-1.5 text-xs font-bold bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] active:border-t-[#808080] active:border-l-[#808080] active:border-r-white active:border-b-white active:pt-2 active:pb-1 active:pl-[18px] active:pr-[14px]"
-                >
+                <Win95Button href={card.href} size="sm">
                   View Case Study
-                </Link>
+                </Win95Button>
               </div>
             </article>
           ))}
         </div>
-      </div>
+      </Win95Inset>
     </Win95Window>
   );
 }

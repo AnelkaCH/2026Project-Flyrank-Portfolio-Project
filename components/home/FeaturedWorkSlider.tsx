@@ -1,81 +1,32 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import Win95Window from "@/components/ui/Win95Window";
-
-const featuredWork = [
-  {
-    title: "Job Monitoring System",
-    description:
-      "Highlights: A solution in job hunting that notifies me when a new job posting matches my criteria, without me manually checking. It includes adapter pattern across 10+ ATS platforms, robots.txt compliant, rate limited with backoff.",
-    image: "/images/case-studies/job-monitoring-system/main-photo.png",
-    link: "/case-studies/job-monitoring-system",
-  },
-  {
-    title: "Accelist Internship",
-    description:
-      "Highlights: Working with the whole stack, Next.js and React for frontend and .Net for backend. Projects include event-driven integration syncing two production systems (e.g. Odoo) via APIs and webhooks.",
-    image: "/images/case-studies/accelist/main-photo.png",
-    link: "/case-studies/accelist-lentera-indonesia",
-  },
-  {
-    title: "FlyRank AI Internship",
-    description:
-      "Highlights: Working with modern AI tools to create backend solutions. Projects include Node/Express API taken through SQLite, Docker, and PostgreSQL and integration with Supabase.",
-    image: "/images/case-studies/flyrank-ai/main-photo.png",
-    link: "/case-studies/flyrank-ai",
-  },
-];
+import Win95Inset from "@/components/ui/Win95Inset";
+import Win95Button from "@/components/ui/Win95Button";
+import { getFeaturedCaseStudies } from "@/lib/caseStudies";
+import { useAutoCarousel } from "@/hooks/useAutoCarousel";
 
 export default function FeaturedWorkSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const featuredWork = getFeaturedCaseStudies();
+  const { currentIndex, goTo, pauseHandlers } = useAutoCarousel({
+    itemCount: featuredWork.length,
+    intervalMs: 5000,
+  });
 
-  useEffect(() => {
-    if (!isPaused) {
-      timerRef.current = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredWork.length);
-      }, 5000);
-    }
-    return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
-    };
-  }, [isPaused]);
-
-  const handleDotClick = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const currentSlide = featuredWork[currentIndex];
+  const currentSlide = featuredWork[currentIndex] ?? featuredWork[0];
 
   return (
     <div className="w-full font-mono text-black">
-      <div
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        onFocus={() => setIsPaused(true)}
-        onBlur={() => setIsPaused(false)}
-      >
+      <div {...pauseHandlers}>
         <Win95Window title="C:\FEATURED_WORK.EXE">
           {/* Inset screen panel showing the current slide's project image */}
-          <div
-            className="relative w-full aspect-video bg-black overflow-hidden flex items-center justify-center"
-            style={{
-              borderStyle: "inset",
-              borderWidth: "2px",
-              borderColor: "#808080 #ffffff #ffffff #808080",
-            }}
-          >
+          <Win95Inset className="relative w-full aspect-video bg-black overflow-hidden flex items-center justify-center">
             <img
               src={currentSlide.image}
               alt={currentSlide.title}
               className="object-cover w-full h-full"
             />
-          </div>
+          </Win95Inset>
 
           {/* Description and Action Area */}
           <div className="mt-3 flex flex-col gap-2">
@@ -86,17 +37,11 @@ export default function FeaturedWorkSlider() {
               {currentSlide.description}
             </p>
 
-            {/* View Case Study Button styled as Win95 Raised Button */}
+            {/* View Case Study Button */}
             <div className="mt-2 flex justify-start">
-              <Link
-                href={currentSlide.link}
-                className="inline-block px-4 py-1.5 text-xs sm:text-sm font-bold bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] active:border-t-[#808080] active:border-l-[#808080] active:border-r-white active:border-b-white active:pt-2 active:pb-1 active:pl-[18px] active:pr-[14px]"
-                style={{
-                  outline: "none",
-                }}
-              >
+              <Win95Button href={currentSlide.link} size="sm">
                 View Case Study
-              </Link>
+              </Win95Button>
             </div>
 
             {/* Progress Dots */}
@@ -104,14 +49,10 @@ export default function FeaturedWorkSlider() {
               {featuredWork.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => handleDotClick(index)}
-                  className="w-3.5 h-3.5 transition-colors focus:outline-none"
-                  style={{
-                    backgroundColor: index === currentIndex ? "#000000" : "#808080",
-                    borderStyle: "inset",
-                    borderWidth: "1.5px",
-                    borderColor: "#808080 #ffffff #ffffff #808080",
-                  }}
+                  onClick={() => goTo(index)}
+                  className={`w-3.5 h-3.5 win95-inset-sm transition-colors focus:outline-none ${
+                    index === currentIndex ? "bg-black" : "bg-[#808080]"
+                  }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
