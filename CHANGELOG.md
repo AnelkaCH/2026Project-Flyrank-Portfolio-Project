@@ -1,5 +1,29 @@
 # Changelog
 
+## [2026-09-27] v0.7.1 - Architecture & Component Refactoring
+### Added
+- `components/ui/Win95Inset.tsx` - Reusable inset panel component with `small` option to eliminate inline bevel border definitions across the application.
+- `.win95-inset`, `.win95-inset-sm`, and `.win95-outset` utility classes in `app/globals.css`.
+- `hooks/useTypewriter.ts` - Custom hook isolating typing interval logic, variable typing speed calculation, and `prefers-reduced-motion` detection.
+- `hooks/useAutoCarousel.ts` - Custom hook managing carousel intervals, manual navigation, and hover/focus pause handlers.
+- `lib/types/caseStudy.ts` - Core TypeScript interfaces for structured case study content (`CaseStudyData`, `CaseStudySection`, `CaseStudyBlock`, `CaseStudyParagraph`, `CaseStudyList`).
+- `lib/case-studies/` - Individual typed data files for each case study (`job-monitoring-system.ts`, `password-strength-checker.ts`, `auth-api.ts`, `accelist-lentera-indonesia.ts`, `flyrank-ai.ts`, `gendigital-academy.ts`, and barrel `index.ts`).
+- `lib/terminalCommands.tsx` - Centralized commands, bios, quick facts, contact links, and chips for the interactive terminal.
+- `lib/statusTimeline.ts` - Centralized status items and timeline metadata.
+
+### Changed
+- `AGENTS.md` - Added component architecture, data separation, and clean-code constraints for future agent development.
+- `components/ui/Win95Button.tsx` - Made polymorphic (supports both `Link` via `href` and standard `<button>` via `onClick`), added `size="sm"` and `size="md"` options.
+- `components/home/FeaturedWorkSlider.tsx` - Refactored to consume centralized case study data via `getFeaturedCaseStudies()`, `useAutoCarousel`, `<Win95Inset>`, and `<Win95Button>`.
+- `components/home/InteractiveTerminal.tsx` - Refactored to consume `useTypewriter` and `lib/terminalCommands.tsx`.
+- `components/home/CurrentStatus.tsx` - Refactored to consume `lib/statusTimeline.ts` and `<Win95Inset>`.
+- `components/case-study/CaseStudyWindow.tsx` - Refactored to use `<Win95Inset>`, `.win95-outset`, and `<Win95Button size="sm">`, removing inline styles.
+- `app/case-studies/[slug]/page.tsx` - Simplified all case study page routes to directly import structured static data, eliminating runtime filesystem reads (`fs.readFileSync`).
+
+### Removed
+- `components/case-study/parseCaseStudyMarkdown.ts` & `lib/parseCaseStudyMarkdown.ts` - Removed custom markdown parsing logic in favor of typed static content.
+- Removed legacy `.md` files in `app/case-studies/**/`.
+
 ## [2026-09-14] v0.7 - New Project and Information Update
 ### Added
 - A new project called `Building an Auth API with Supabase` is added to `personal projects`

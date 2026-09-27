@@ -1,5 +1,3 @@
-# FlyRank Portfolio Project
+# My Portfolio Website
 
-As part of my program, I have to create a portfolio website, so here it is :D
-
-P.S This is not my actual portfolio website.
+Hi! This is my portfolio website.
