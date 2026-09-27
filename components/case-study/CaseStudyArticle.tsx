@@ -2,7 +2,10 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import CaseStudyBrowser from "./CaseStudyBrowser";
 import TerminalWindow from "@/components/ui/TerminalWindow";
-import type { CaseStudyData, CaseStudyList } from "./parseCaseStudyMarkdown";
+import type {
+  CaseStudyData,
+  CaseStudyList,
+} from "@/lib/parseCaseStudyMarkdown";
 
 function TerminalList({ block }: { block: CaseStudyList }) {
   return (

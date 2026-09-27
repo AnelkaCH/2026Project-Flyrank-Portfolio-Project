@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
-import { parseCaseStudyMarkdown } from "@/components/case-study/parseCaseStudyMarkdown";
+import { parseCaseStudyMarkdown } from "@/lib/parseCaseStudyMarkdown";
 
 const source =
   "app/case-studies/flyrank-ai/Backend_AI_Engineer_at_FlyRank_AI.md";
