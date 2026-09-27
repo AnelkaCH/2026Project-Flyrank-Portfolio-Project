@@ -54,3 +54,23 @@ h6 {
     transform: translateX(-50%);
   }
 }
+
+/* Windows 95 Bezel & Surface Utilities */
+.win95-outset {
+  background-color: #c0c0c0;
+  border-style: outset;
+  border-width: 2px;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+.win95-inset {
+  border-style: inset;
+  border-width: 2px;
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.win95-inset-sm {
+  border-style: inset;
+  border-width: 1.5px;
+  border-color: #808080 #ffffff #ffffff #808080;
+}
