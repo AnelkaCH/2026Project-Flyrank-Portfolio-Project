@@ -5,7 +5,7 @@ import TerminalWindow from "@/components/ui/TerminalWindow";
 import type {
   CaseStudyData,
   CaseStudyList,
-} from "@/lib/parseCaseStudyMarkdown";
+} from "@/lib/types/caseStudy";
 
 function TerminalList({ block }: { block: CaseStudyList }) {
   return (

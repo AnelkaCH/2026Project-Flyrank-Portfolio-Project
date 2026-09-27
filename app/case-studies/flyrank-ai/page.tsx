@@ -1,19 +1,12 @@
-import fs from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
 import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
-import { parseCaseStudyMarkdown } from "@/lib/parseCaseStudyMarkdown";
-
-const source =
-  "app/case-studies/flyrank-ai/Backend_AI_Engineer_at_FlyRank_AI.md";
-const markdown = fs.readFileSync(path.join(process.cwd(), source), "utf8");
-const data = parseCaseStudyMarkdown(markdown, source);
+import { flyrankAiData } from "@/lib/case-studies/flyrank-ai";
 
 export const metadata: Metadata = {
-  title: "FlyRank AI | Case Study",
-  description: data.subtitle,
+  title: "FlyRank AI Internship | Case Study",
+  description: flyrankAiData.subtitle,
 };
 
-export default function FlyRankAICaseStudyPage() {
-  return <CaseStudyArticle data={data} />;
+export default function FlyrankAiCaseStudyPage() {
+  return <CaseStudyArticle data={flyrankAiData} />;
 }

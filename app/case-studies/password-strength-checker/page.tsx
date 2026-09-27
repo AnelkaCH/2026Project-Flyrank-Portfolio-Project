@@ -1,19 +1,12 @@
-import fs from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
 import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
-import { parseCaseStudyMarkdown } from "@/lib/parseCaseStudyMarkdown";
-
-const source =
-  "app/case-studies/password-strength-checker/Building_a_Password_Strength_Checker.md";
-const markdown = fs.readFileSync(path.join(process.cwd(), source), "utf8");
-const data = parseCaseStudyMarkdown(markdown, source);
+import { passwordStrengthCheckerData } from "@/lib/case-studies/password-strength-checker";
 
 export const metadata: Metadata = {
   title: "Password Strength Checker | Case Study",
-  description: data.subtitle,
+  description: passwordStrengthCheckerData.subtitle,
 };
 
 export default function PasswordStrengthCaseStudyPage() {
-  return <CaseStudyArticle data={data} />;
+  return <CaseStudyArticle data={passwordStrengthCheckerData} />;
 }

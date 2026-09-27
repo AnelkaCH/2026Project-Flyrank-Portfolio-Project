@@ -1,19 +1,12 @@
-import fs from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
 import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
-import { parseCaseStudyMarkdown } from "@/lib/parseCaseStudyMarkdown";
-
-const source =
-  "app/case-studies/accelist-lentera-indonesia/Interning_at_Accelist_Lentera_Indonesia.md";
-const markdown = fs.readFileSync(path.join(process.cwd(), source), "utf8");
-const data = parseCaseStudyMarkdown(markdown, source);
+import { accelistData } from "@/lib/case-studies/accelist-lentera-indonesia";
 
 export const metadata: Metadata = {
   title: "Accelist Lentera Indonesia | Case Study",
-  description: data.subtitle,
+  description: accelistData.subtitle,
 };
 
 export default function AccelistCaseStudyPage() {
-  return <CaseStudyArticle data={data} />;
+  return <CaseStudyArticle data={accelistData} />;
 }
