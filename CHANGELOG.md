@@ -1,6 +1,9 @@
 # Changelog
 
 ## [2026-09-28] v0.7.2 - Changes to Metadata
+### Added
+- Added verification for Google Search Console.
+
 ### Changed
 - Updated the metadata for all pages.
 

@@ -18,10 +18,14 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anelka | Security Analyst Enthusiast",
+  title: "Anelka Cornelius Hariyanto| Security Analyst Enthusiast",
   description:
     "Portfolio of Anelka, incoming SUTD Computer Science & Design (Security) student.",
+  verification: {
+    google: "viOo7tsHoO-UjXKCWx3J7iehMwDfW_yRGA56X7kQK0k",
+  },
 };
+
 
 export default function RootLayout({
   children,
