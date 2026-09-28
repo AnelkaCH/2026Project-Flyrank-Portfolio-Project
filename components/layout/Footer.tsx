@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 
 const GITHUB_URL = "https://github.com/AnelkaCH";
 const LINKEDIN_URL = "https://www.linkedin.com/in/anelka-hariyanto/";
-const EMAIL = "anelka.c.hariyanto@gmail.com";
+const EMAIL = "anelka-hariyanto@mymail.sutd.edu.sg";
 
 const socials = [
   {

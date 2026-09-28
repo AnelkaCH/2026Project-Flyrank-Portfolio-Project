@@ -7,6 +7,7 @@
 
 ### Changed
 - Updated the metadata for all pages.
+- Changed my email to `anelka-hariyanto@mymail.sutd.edu.sg`
 
 ## [2026-09-27] v0.7.1 - Architecture & Component Refactoring
 ### Added
