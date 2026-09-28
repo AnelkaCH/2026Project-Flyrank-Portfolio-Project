@@ -1,8 +1,9 @@
 # Changelog
 
-## [2026-09-28] v0.7.2 - Changes to Metadata
+## [2026-09-28] v0.8 - Metadata Changes and robots.txt and sitemap.xml additions
 ### Added
 - Added verification for Google Search Console.
+- `robots.txt` and `sitemap.xml` were added as well.
 
 ### Changed
 - Updated the metadata for all pages.
