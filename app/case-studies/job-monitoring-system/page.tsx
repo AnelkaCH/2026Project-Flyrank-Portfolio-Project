@@ -3,7 +3,7 @@ import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
 import { jobMonitoringSystemData } from "@/lib/case-studies/job-monitoring-system";
 
 export const metadata: Metadata = {
-  title: "Job Monitoring System | Case Study",
+  title: "Anelka Cornelius Hariyanto | Job Monitoring System",
   description: jobMonitoringSystemData.subtitle,
 };
 

@@ -3,7 +3,7 @@ import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
 import { authApiData } from "@/lib/case-studies/auth-api";
 
 export const metadata: Metadata = {
-  title: "Auth API with Supabase | Case Study",
+  title: "Anelka Cornelius Hariyanto | Auth API with Supabase",
   description: authApiData.subtitle,
 };
 

@@ -3,7 +3,7 @@ import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
 import { passwordStrengthCheckerData } from "@/lib/case-studies/password-strength-checker";
 
 export const metadata: Metadata = {
-  title: "Password Strength Checker | Case Study",
+  title: "Anelka Cornelius Hariyanto | Password Strength Checker",
   description: passwordStrengthCheckerData.subtitle,
 };
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 import TerminalWindow from "@/components/ui/TerminalWindow";
 import BrowserTabs from "@/components/ui/BrowserTabs";
 import Win95Window from "@/components/ui/Win95Window";
+import { Metadata } from "next";
 
 const values = [
   {
@@ -50,6 +51,11 @@ const milestones = [
     alt: "SUTD campus",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Anelka Cornelius Hariyanto | About Me",
+  description: "Learn more about me and my journey in the world of technology and cybersecurity.",
+};
 
 export default function AboutPage() {
   return (

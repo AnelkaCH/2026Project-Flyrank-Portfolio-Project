@@ -3,7 +3,7 @@ import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
 import { genDigitalAcademyData } from "@/lib/case-studies/gendigital-academy";
 
 export const metadata: Metadata = {
-  title: "GenDigital Academy | Case Study",
+  title: "Anelka Cornelius Hariyanto | GenDigital Academy",
   description: genDigitalAcademyData.subtitle,
 };
 

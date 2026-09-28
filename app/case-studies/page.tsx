@@ -1,6 +1,7 @@
 import FilmStrip from "@/components/ui/FilmStrip";
 import CaseStudyWindow from "@/components/case-study/CaseStudyWindow";
 import { buildCaseStudyTabs } from "@/lib/caseStudies";
+import { Metadata } from "next";
 
 const filmStripImages = [
   {
@@ -36,6 +37,11 @@ const filmStripImages = [
 ];
 
 const caseStudyTabs = buildCaseStudyTabs();
+
+export const metadata: Metadata = {
+  title: "Anelka Cornelius Hariyanto | Case Studies",
+  description: "Explore my case studies and the projects I've worked on.",
+};
 
 export default function CaseStudiesPage() {
   return (

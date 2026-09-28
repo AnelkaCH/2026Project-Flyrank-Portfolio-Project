@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Anelka",
+  title: "Anelka Cornelius Hariyanto | Contact",
   description:
     "Reach out to Anelka. Open to internships, security roles, and conversations about building things responsibly.",
 };

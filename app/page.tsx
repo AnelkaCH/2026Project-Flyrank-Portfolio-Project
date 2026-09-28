@@ -7,7 +7,7 @@ import FeaturedWorkSlider from "@/components/home/FeaturedWorkSlider";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Anelka | Developer turning to security",
+  title: "Anelka Cornelius Hariyanto | Portfolio",
   description:
     "Portfolio of Anelka, a developer moving from building software to securing it. Incoming SUTD Computer Science & Design (Security) student.",
 };

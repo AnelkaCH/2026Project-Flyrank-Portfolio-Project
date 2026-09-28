@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026-09-28] v0.7.2 - Changes to Metadata
+### Changed
+- Updated the metadata for all pages.
+
 ## [2026-09-27] v0.7.1 - Architecture & Component Refactoring
 ### Added
 - `components/ui/Win95Inset.tsx` - Reusable inset panel component with `small` option to eliminate inline bevel border definitions across the application.

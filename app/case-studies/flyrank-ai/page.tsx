@@ -3,7 +3,7 @@ import CaseStudyArticle from "@/components/case-study/CaseStudyArticle";
 import { flyrankAiData } from "@/lib/case-studies/flyrank-ai";
 
 export const metadata: Metadata = {
-  title: "FlyRank AI Internship | Case Study",
+  title: "Anelka Cornelius Hariyanto | FlyRank AI Internship",
   description: flyrankAiData.subtitle,
 };
 
