@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Anelka Cornelius Hariyanto | Portfolio",
   description:
-    "Portfolio of Anelka, a developer moving from building software to securing it. Incoming SUTD Computer Science & Design (Security) student.",
+    "Portfolio of Anelka Hariyanto, a developer moving from building software to securing it. Incoming SUTD Computer Science & Design (Security) student.",
 };
 
 export default function Home() {

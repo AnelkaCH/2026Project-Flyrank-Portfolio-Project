@@ -54,7 +54,7 @@ const milestones = [
 
 export const metadata: Metadata = {
   title: "Anelka Cornelius Hariyanto | About Me",
-  description: "Learn more about me and my journey in the world of technology and cybersecurity.",
+  description: "Learn more about Anelka Hariyanto and his journey in the world of technology and cybersecurity.",
 };
 
 export default function AboutPage() {

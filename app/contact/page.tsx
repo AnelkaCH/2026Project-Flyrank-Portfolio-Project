@@ -5,7 +5,7 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Anelka Cornelius Hariyanto | Contact",
   description:
-    "Reach out to Anelka. Open to internships, security roles, and conversations about building things responsibly.",
+    "Reach out to Anelka Hariyanto. Open to internships, security roles, and conversations about building things responsibly.",
 };
 
 const GITHUB_URL = "https://github.com/AnelkaCH";

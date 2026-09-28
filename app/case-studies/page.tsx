@@ -40,7 +40,7 @@ const caseStudyTabs = buildCaseStudyTabs();
 
 export const metadata: Metadata = {
   title: "Anelka Cornelius Hariyanto | Case Studies",
-  description: "Explore my case studies and the projects I've worked on.",
+  description: "Explore Anelka Hariyanto's case studies and the projects I've worked on.",
 };
 
 export default function CaseStudiesPage() {
