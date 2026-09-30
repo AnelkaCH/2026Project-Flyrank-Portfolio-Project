@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const GITHUB_URL = "https://github.com/AnelkaCH";
 const LINKEDIN_URL = "https://www.linkedin.com/in/anelka-hariyanto/";
-const EMAIL = "anelka-hariyanto@mymail.sutd.edu.sg";
+const EMAIL = "anelka_hariyanto@mymail.sutd.edu.sg";
 
 const channels = [
   {

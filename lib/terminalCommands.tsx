@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export const GITHUB_URL = "https://github.com/AnelkaCH";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/anelka-hariyanto/";
-export const EMAIL = "anelka-hariyanto@mymail.sutd.edu.sg";
+export const EMAIL = "anelka_hariyanto@mymail.sutd.edu.sg";
 
 const linkClasses = "text-[#06B6D4] transition hover:underline";
 
@@ -27,7 +27,7 @@ backend: Node.js, Express, PostgreSQL, SQLite, MySQL, Docker, Supabase
 security: detect-secrets pre-commit hooks, rate limiting with backoff, robots.txt compliance, audit logging`,
   },
   contact: {
-    text: `email: anelka-hariyanto@mymail.sutd.edu.sg
+    text: `email: anelka_hariyanto@mymail.sutd.edu.sg
 github: github.com/AnelkaCH
 linkedin: linkedin.com/in/anelka-hariyanto
 location: Jakarta, Indonesia`,

@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Win95Window from "@/components/ui/Win95Window";
 
-const EMAIL = "anelka-hariyanto@mymail.sutd.edu.sg";
+const EMAIL = "anelka_hariyanto@mymail.sutd.edu.sg";
 
 const labelClasses =
   "mb-1 block font-mono text-xs font-bold uppercase tracking-widest text-slate-800";

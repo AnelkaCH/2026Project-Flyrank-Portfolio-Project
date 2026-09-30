@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026-09-28] v0.8.1 - Email Fixes
+### Changed
+- Corrected the email format error.
+
 ## [2026-09-28] v0.8 - Metadata Changes and robots.txt and sitemap.xml additions
 ### Added
 - Added verification for Google Search Console.
